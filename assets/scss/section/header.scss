@@ -1,0 +1,47 @@
+.nav {
+  padding: 1.157rem 0;
+  &__logo {
+    img {
+      width: 170px;
+      height: auto;
+    }
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__menu {
+    li {
+      list-style: none;
+      display: inline-block;
+  
+      a {
+        color: $textColor;
+        padding: 1rem 0.938rem;
+        line-height: 1.5rem;
+        position: relative;
+
+        &.active {
+          color: $titleColor;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          width: fit-content;
+          height: 1px;
+          background-color: $primaryColor;
+
+        }
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}

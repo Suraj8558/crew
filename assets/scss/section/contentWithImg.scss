@@ -1,0 +1,16 @@
+.digital {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3.125rem;
+	align-items: center;
+	padding: 3rem 0;
+
+	&__btn {
+		margin-top: 1rem;
+	}
+
+	&__contentWrap {
+		position: relative;
+	}
+	
+}

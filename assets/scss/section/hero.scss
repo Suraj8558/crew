@@ -1,0 +1,56 @@
+.hero {
+	display: grid;
+	grid-template-columns: 1.0823fr 1fr;
+	gap: 1.346rem;
+	align-items: center;
+	padding: 3rem 0;
+
+	&__title {
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 135.5px;
+			height: 135.5px;
+			background-color: #fce9ba;
+			border-radius: 100%;
+			z-index: -1;
+			transform: translate(30%, -47%);
+		}
+		span {
+			font-size: 3.75rem;
+			line-height: 120%;
+
+			&.border {
+				position: relative;
+
+				&::before {
+					content: "";
+
+					position: absolute;
+					background: $primaryColor;
+					width: 100%;
+					height: 14px;
+					bottom: 6px;
+					z-index: -1;
+				}
+			}
+		}
+	}
+	&__btn {
+		margin-top: 1rem;
+	}
+
+	&__contentWrap {
+		position: relative;
+	}
+	&__imgWrap {
+		img {
+			scale: 1.13;
+			transform-origin: left;
+		}
+	}
+}

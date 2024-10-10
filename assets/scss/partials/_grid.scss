@@ -1,0 +1,51 @@
+@mixin grid-columns($columns: 1,
+  $column-width: 1fr,
+  $align-items: start,
+  $justify-content: start,
+  $grid-gap: 20px) {
+  display: grid;
+  grid-template-columns: repeat($columns, $column-width);
+  grid-gap: $grid-gap;
+
+  @if $align-items !=start {
+    align-items: $align-items;
+  }
+
+  @if $justify-content !=start {
+    justify-content: $justify-content;
+  }
+}
+
+@mixin d-flex($direction: row,
+  $align-items: flex-start,
+  $justify-content: flex-start,
+) {
+  display: flex;
+
+  @if $direction !=row {
+    flex-direction: $direction;
+  }
+
+  @if $align-items !=flex-start {
+    align-items: $align-items;
+  }
+
+  @if $justify-content !=flex-start {
+    justify-content: $justify-content;
+  }
+}
+
+@mixin d-flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}

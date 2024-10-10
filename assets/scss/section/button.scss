@@ -1,0 +1,35 @@
+.btn {
+	display: inline-block;
+	font-family: $primaryFont;
+	font-size: 1rem;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 0.313rem;
+	transition: 0.3s ease;
+	padding: 0.938rem 3.125rem;
+	font-weight: $fontBold;
+	border: 1px solid transparent;
+
+	&__primary {
+		background-color: $primaryColor;
+		color: $whiteColor;
+
+		&:hover {
+			background-color: $whiteColor;
+			color: $primaryColor;
+			border-color: $primaryColor;
+		}
+	}
+
+	&__secondary {
+		background-color: $whiteColor;
+		color: $primaryColor;
+		border-color: $primaryColor;
+
+		&:hover {
+			background-color: $primaryColor;
+			color: $whiteColor;
+		}
+	}
+}

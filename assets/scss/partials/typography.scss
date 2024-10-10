@@ -1,0 +1,203 @@
+
+// container size  
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+//  typography for  html tags
+h1, h2.hero, .h1 {
+  font-family: $primaryFont;
+  font-weight: 700;
+  font-size: 50px;  
+  line-height: 120%;
+  margin-bottom: 20px;
+  color: $titleColor;
+  
+  @media (max-width: 991px) {
+    font-size: 45px;
+  }
+  @media (max-width: 767px) {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 575px) {
+    font-size: 35px;
+  }
+  @media (max-width: 480px) {
+    font-size: 30px;
+  }
+}
+h2, .h2 {
+  font-family: $primaryFont;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  margin-bottom: 25px;
+  color: var(--titleColor);
+  
+  @media (max-width: 1199px) {
+    font-size: 45px;
+  }
+  @media (max-width: 991px) {
+    font-size: 40px;
+  }
+  @media (max-width: 767px) {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 575px) {
+    font-size: 30px;
+  }
+  @media (max-width: 480px) {
+    font-size: 26px;
+  }
+}
+h3, .h3{
+  font-family: $primaryFont;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 120%;
+  margin-bottom: 25px;
+  color: var(--titleColor);
+
+  @media (max-width: 1199px) {
+    font-size: 40px;
+  }
+  @media (max-width: 991px) {
+    font-size: 35px;
+  }
+  @media (max-width: 767px) {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 575px) {
+    font-size: 26px;
+  }
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
+}
+h4, .h4 {
+  font-family: $primaryFont;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  margin-bottom: 20px;
+  color: var(--titleColor);
+
+  @media (max-width: 991px) {
+    font-size: 30px;
+  }
+  @media (max-width: 767px) {
+    font-size: 27px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 575px) {
+    font-size: 24px;
+  }
+  @media (max-width: 480px) {
+    font-size: 22px;
+  }
+}
+h5, .h5 {
+  font-family: $primaryFont;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  color: var(--titleColor);
+  @media (max-width: 767px) {
+    font-size: 22px;
+  }
+  @media (max-width: 575px) {
+    font-size: 20px;
+  }
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
+}
+h6, .h6 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 15px;
+  color: var(--titleColor);
+  @media (max-width: 575px) {
+    font-size: 16px;
+  }
+  @media (max-width: 480px) {
+    font-size: 15px;
+  }
+
+  &.thin{
+    font-family: $primaryFont;
+    font-weight: 400;
+  }
+}
+
+p {
+  margin-bottom: 24px;
+  color: $textColor;
+  line-height: 150%;
+  @media (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+  @media (max-width: 575px) {
+    margin-bottom: 15px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.border {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: $primaryColor;
+    width: 100%;
+    height: 14px;
+    z-index: -1;
+  }
+  }
