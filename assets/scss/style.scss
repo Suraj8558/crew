@@ -7,6 +7,20 @@
 @import './section/header.scss';
 @import './section/hero.scss';
 @import './section/contentWithImg.scss';
+@import './section/contentWithImg.scss';
+@import './section/feature.scss';
+@import './section/discover.scss';
 
+
+
+
+
+.borderBottom {
+  border-bottom: 5px solid $primaryColor;
+}
+
+.title {
+  text-align: center;
+}
 
 
