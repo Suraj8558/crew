@@ -1,0 +1,64 @@
+.price {
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+	}
+	&__card {
+		border: 1px solid #0004031a;
+		border-radius: 1rem;
+		padding: 1.5rem;
+	}
+	&__title {
+		font-weight: $fontBold;
+		color: $blackColor;
+		margin-bottom: 2px;
+	}
+
+	&__amount {
+		margin-bottom: 0;
+		color: $primaryColor;
+	}
+
+	&__tag {
+		font-size: 1rem;
+		color: #666968;
+		font-weight: $fontNormal;
+		line-height: 1rem;
+	}
+	&__desc {
+		color: #666968;
+		margin-bottom: 1rem;
+	}
+	&__list {
+		li {
+			list-style: none;
+			padding-left: 2.5rem;
+			position: relative;
+			color: #1a1a1a;
+
+			&:not(:last-child) {
+				margin-bottom: 1.25rem;
+			}
+			&::before {
+				position: absolute;
+				content: "";
+				background-color: $lightPeach;
+				background-image: url("/assets/img/Check-icon.svg");
+				min-width: 28px;
+				background-repeat: no-repeat;
+				min-height: 28px;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				border-radius: 100%;
+			}
+		}
+	}
+	&__btn {
+		.btn {
+			display: block;
+			margin-top: 2rem;
+		}
+	}
+}

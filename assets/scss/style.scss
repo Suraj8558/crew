@@ -10,6 +10,10 @@
 @import './section/contentWithImg.scss';
 @import './section/feature.scss';
 @import './section/discover.scss';
+@import './section/price.scss';
+@import './section/faq.scss';
+@import './section/footer.scss';
+
 
 
 
@@ -24,3 +28,10 @@
 }
 
 
+.pb {
+  padding-bottom: 3.125rem ;
+}
+
+.py {
+  padding: 3.75rem 0;
+}

@@ -362,8 +362,8 @@ h5, .h5 {
 }
 
 h6, .h6 {
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 150%;
   margin-bottom: 15px;
   color: var(--titleColor);
@@ -666,12 +666,218 @@ p:last-child {
   justify-content: center;
 }
 
+.price__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.price__card {
+  border: 1px solid rgba(0, 4, 3, 0.1019607843);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.price__title {
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 2px;
+}
+.price__amount {
+  margin-bottom: 0;
+  color: #F4B41A;
+}
+.price__tag {
+  font-size: 1rem;
+  color: #666968;
+  font-weight: 400;
+  line-height: 1rem;
+}
+.price__desc {
+  color: #666968;
+  margin-bottom: 1rem;
+}
+.price__list li {
+  list-style: none;
+  padding-left: 2.5rem;
+  position: relative;
+  color: #1a1a1a;
+}
+.price__list li:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+.price__list li::before {
+  position: absolute;
+  content: "";
+  background-color: #FFEAD6;
+  background-image: url("/assets/img/Check-icon.svg");
+  min-width: 28px;
+  background-repeat: no-repeat;
+  min-height: 28px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+}
+.price__btn .btn {
+  display: block;
+  margin-top: 2rem;
+}
+
+.faq {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 2.125rem;
+}
+.faq__title p {
+  margin-bottom: 0;
+}
+.faq__title a {
+  font-weight: 700;
+  color: #F4B41A;
+}
+
+.accordion {
+  width: 100%;
+}
+.accordion .accordion-item {
+  border: 1px solid rgba(102, 105, 104, 0.3019607843);
+  margin-bottom: 19px;
+  padding: 13.5px 21px;
+  border-radius: 12px;
+}
+.accordion .accordion-item .accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  padding: 0;
+}
+.accordion .accordion-item .accordion-header .accordion-title {
+  flex: 1;
+  padding-right: 30px;
+  position: relative;
+  font-size: 1.25rem;
+  line-height: 140%;
+  font-weight: 700;
+}
+.accordion .accordion-item .accordion-header .accordion-title::before {
+  content: "";
+  background-image: url("/assets/img/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+.accordion .accordion-item .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.accordion .accordion-item .accordion-content p {
+  margin-top: 4px;
+  padding-right: 30px;
+}
+.accordion .accordion-item.active {
+  background: #F6F6F6;
+  border-color: transparent;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.accordion .accordion-item.active .accordion-header .accordion-title {
+  padding-bottom: 0px;
+}
+.accordion .accordion-item.active .accordion-header .accordion-title::before {
+  transform: rotate(180deg) translateY(50%);
+}
+.accordion .accordion-item.active .accordion-content {
+  max-height: 100px;
+}
+
+.footer__wrap {
+  background: #000000;
+}
+.footer__content {
+  max-width: 521px;
+  margin: auto;
+  padding-top: 78px;
+  padding-bottom: 69px;
+}
+.footer__menu {
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
+.footer__menu li {
+  display: inline-block;
+  list-style: none;
+}
+.footer__menu li a {
+  color: #FFFFFF;
+  padding-inline: 15px;
+}
+.footer__logo {
+  max-width: 457px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.footer__desc {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  gap: 12px;
+}
+.footer__social__imgWrap {
+  background: rgba(244, 180, 26, 0.1607843137);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__social__imgWrap img {
+  width: fit-content;
+  object-fit: contain;
+}
+.footer__copy {
+  border-top: 2px solid rgba(244, 180, 26, 0.1607843137);
+}
+.footer__copy-text {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 20px 0;
+  text-align: center;
+}
+
 .borderBottom {
   border-bottom: 5px solid #F4B41A;
 }
 
 .title {
   text-align: center;
+}
+
+.pb {
+  padding-bottom: 3.125rem;
+}
+
+.py {
+  padding: 3.75rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
