@@ -19,6 +19,10 @@
 			background-color: $whiteColor;
 			color: $primaryColor;
 			border-color: $primaryColor;
+			svg {
+				fill: $primaryColor;
+				stroke:  $primaryColor;
+			}
 		}
 	}
 
@@ -31,5 +35,13 @@
 			background-color: $primaryColor;
 			color: $whiteColor;
 		}
+	}
+
+	@include smallDesktop {
+		padding: 10px 22px;
+	}
+
+	@include allMobile {
+		padding: 7px 20px;
 	}
 }

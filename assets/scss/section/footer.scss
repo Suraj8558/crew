@@ -18,6 +18,8 @@
 			a {
 				color: $whiteColor;
 				padding-inline: 15px;
+				display: block;
+				margin-bottom: 14px;
 			}
 		}
 	}
@@ -62,6 +64,13 @@
 			color: rgb(255 255 255 / 80%);
 			padding: 20px 0;
 			text-align: center;
+		}
+	}
+
+	@include allMobile {
+		&__content {
+			padding-top: 40px;
+			padding-bottom: 10px;
 		}
 	}
 }

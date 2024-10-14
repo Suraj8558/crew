@@ -4,6 +4,14 @@
   grid-template-columns: 1fr 1.4fr;
   gap: 2.125rem;
 
+  &__section {
+    padding-top: 80px;
+  }
+  &__wrap {
+    background: #F6F6F6;
+    padding: 100px 0;
+  }
+
   &__title {
     p {
       margin-bottom: 0;
@@ -14,14 +22,17 @@
     }
   }
 }
+
 .accordion {
   width: 100%;
 
   .accordion-item {
     border: 1px solid #6669684D;
-    margin-bottom: 19px;
     padding: 13.5px 21px;
     border-radius: 12px;
+    &:not(:last-child) {
+      margin-bottom: 19px;
+    }
 
     .accordion-header {
       display: flex;
@@ -88,5 +99,10 @@
         max-height: 100px;
       }
     }
+  }
+}
+@include allMobile {
+  .faq {
+    grid-template-columns: 1fr;
   }
 }

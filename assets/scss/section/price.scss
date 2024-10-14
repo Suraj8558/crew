@@ -4,11 +4,23 @@
 		grid-template-columns: repeat(3, 1fr);
 		gap: 1.5rem;
 	}
+
+	&__section {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
 	&__card {
 		border: 1px solid #0004031a;
 		border-radius: 1rem;
 		padding: 1.5rem;
 	}
+
+	&__heading {
+		margin-bottom: 50px;
+		text-align: center	;
+	}
+
 	&__title {
 		font-weight: $fontBold;
 		color: $blackColor;
@@ -16,7 +28,7 @@
 	}
 
 	&__amount {
-		margin-bottom: 0;
+		margin-bottom: 16px;
 		color: $primaryColor;
 	}
 
@@ -26,10 +38,12 @@
 		font-weight: $fontNormal;
 		line-height: 1rem;
 	}
+
 	&__desc {
 		color: #666968;
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
 	}
+
 	&__list {
 		li {
 			list-style: none;
@@ -55,10 +69,43 @@
 			}
 		}
 	}
+
 	&__btn {
 		.btn {
 			display: block;
 			margin-top: 2rem;
 		}
+	}
+
+	@include tablet {
+		&__section {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		
+		&__heading {
+			margin-bottom: 30px;
+		}
+
+		&__cards {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		&__card:last-child {
+			max-width: 364px;
+			grid-column: 1/-1;
+			margin: auto;
+		}
+	}
+
+	@include allMobile {
+		&__cards {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		&__section {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+
 	}
 }

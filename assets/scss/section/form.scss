@@ -1,7 +1,97 @@
-.search {
-  &_box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.form {
+  padding-top: 1rem;
+  padding-bottom: 76px;
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		max-width: 356px;
+		width: 100%;
+		justify-content: center;
+		border-radius: 5px;
+
+		img {
+			width: 20px;
+		}
+	}
+
+	&__element {
+		width: 100%;
+		max-width: 486px;
+		display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+		align-items: center;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		background: $whiteColor;
+		border-radius: 1rem;
+		box-shadow: 0px 0px 80px 0px #0000001a;
+		padding: 1.5rem;
+		justify-content: space-between;
+	}
+
+  &__buisness {
+    border: none;
+    outline: none;
+    max-width: 244px;
   }
+  &__options {
+    width: 100%;
+    max-width: 242px;
+    position: relative;
+    padding-left: 60px;
+
+    &::before {
+      content: "";
+      background: radial-gradient(circle, rgb(244, 180, 26) 0%, rgb(255, 255, 255) 100%);
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      position: absolute;
+      height: 42px;
+      width: 1px;
+
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url("/assets/img/arrow-down.svg");
+      background-size: 10px;
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s ease;
+      background-position: center center;
+    }
+
+    &:hover:after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+  }
+
+  & select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px 20px 10px 10px;
+    font-size: 14px;
+    color: #293240;
+  }
+  
 }
+

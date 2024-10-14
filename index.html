@@ -71,13 +71,27 @@
 					</div>
 				</div>
 			</section>
-					<!-- form section -->
-					<div class="container"> 
-						<form role="search" method="get" class="search-form" id="product_search" action="https://connectcrew.in/directory/search"></form>
-							<div class="search_box search-box">
-								<input type="hidden" name="post_type" value="product">
-								<input type="search" class="search-field" placeholder="Search for any Business..." value="" name="search-business">
-								<select class="select-box " required="required" name="category">
+			<!-- form section -->
+			<div class="container">
+				<form
+					role="form"
+					method="get"
+					class="form"
+					id="product_search"
+					action=""
+				>
+					<div class="form__wrapper">
+						<div class="form__element">
+							<input type="hidden" name="post_type" value="product" />
+							<input
+								type="search"
+								class="form__buisness"
+								placeholder="Search for any Business..."
+								value=""
+								name="search-business"
+							/>
+							<div class="form__options">
+								<select class="select-box" required="required" name="category">
 									<option value="11">Healthcare and Medicine</option>
 									<option value="12">Information Technology</option>
 									<option value="13">Education</option>
@@ -93,13 +107,27 @@
 									<option value="23">Agriculture and Environment</option>
 									<option value="24">Individual Profile</option>
 								</select>
-								<button type="submit" class="btn btn__primary search-btn">
-								<span>Search</span>
-								</button>
 							</div>
-						</form>
+						</div>
+						<button type="submit" class="btn btn__primary form__btn">
+							<!-- <svg
+								width="20"
+								height="20"
+								viewBox="0 0 20 20"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M19.8107 18.9121L14.6469 13.8309C15.999 12.3617 16.8299 10.4187 16.8299 8.28064C16.8293 3.70697 13.0621 -0.000202179 8.41464 -0.000202179C3.7672 -0.000202179 0 3.70697 0 8.28064C0 12.8543 3.7672 16.5615 8.41464 16.5615C10.4227 16.5615 12.2644 15.867 13.711 14.7123L18.8949 19.8135C19.1474 20.0624 19.5574 20.0624 19.81 19.8135C20.0632 19.5648 20.0632 19.161 19.8107 18.9121ZM8.41464 15.2874C4.48241 15.2874 1.29471 12.1504 1.29471 8.28064C1.29471 4.4109 4.48241 1.27386 8.41464 1.27386C12.347 1.27386 15.5346 4.4109 15.5346 8.28064C15.5346 12.1504 12.347 15.2874 8.41464 15.2874Z"
+									fill="#F4B41A"
+								/>
+							</svg> -->
+							<span>Search</span>
+						</button>
 					</div>
-					
+				</form>
+			</div>
+
 			<!-- Your Path to Digital section  -->
 			<section>
 				<div class="container">
@@ -139,69 +167,72 @@
 			</section>
 
 			<!-- swiper -->
-			<section class="slider">
-				<div class="container">
-					<div class="slider-content">
-						<h2 class="slider-title">Top Categories</h2>
-						<p>
-							Discover a diverse range of top categories on vCardgo.Find
-							evenything you need in one convenient place.
-						</p>
-					</div>
-				</div>
-				<div class="swiper-section">
-					<div class="swiper-container">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="swiper-slide-imgWrap">
-									<img src="/assets/img/health.svg" alt="health" />
-								</div>
-								<h3>Healthcare and Medicine</h3>
-								<p>0 Business</p>
-							</div>
-							<div class="swiper-slide">
-								<div class="swiper-slide-imgWrap">
-									<img src="/assets/img/information.svg" alt="information" />
-								</div>
-								<h3>Information Technology</h3>
-								<p>0 Business</p>
-							</div>
-							<div class="swiper-slide">
-								<div class="swiper-slide-imgWrap">
-									<img
-										src="/assets/img/education_31979101.svg"
-										alt="education"
-									/>
-								</div>
-								<h3>Education</h3>
-								<p>0 Business</p>
-							</div>
-							<div class="swiper-slide">
-								<div class="swiper-slide-imgWrap">
-									<img src="/assets/img/busseness-slider.svg" alt="Slide 1" />
-								</div>
-								<h3>Business and Finance</h3>
-								<p>0 Business</p>
-							</div>
-							<div class="swiper-slide">
-								<div class="swiper-slide-imgWrap">
-									<img src="/assets/img/health.svg" alt="Slide 1" />
-								</div>
-								<h3>Healthcare and Medicine</h3>
-								<p>0 Business</p>
-							</div>
+			<section>
+				<div class="slider">
+					<div class="container">
+						<div class="slider-content">
+							<h2 class="slider-title">Top Categories</h2>
+							<p>
+								Discover a diverse range of top categories on vCardgo.Find
+								evenything you need in one convenient place.
+							</p>
 						</div>
-						<div class="swiper-pagination"></div>
-						<div class="swiper-button-next"></div>
-						<div class="swiper-button-prev"></div>
+					</div>
+					<div class="swiper-section">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="swiper-slide-imgWrap">
+										<img src="/assets/img/health.svg" alt="health" />
+									</div>
+									<h3>Healthcare and Medicine</h3>
+									<p>0 Business</p>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide-imgWrap">
+										<img src="/assets/img/information.svg" alt="information" />
+									</div>
+									<h3>Information Technology</h3>
+									<p>0 Business</p>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide-imgWrap">
+										<img
+											src="/assets/img/education_31979101.svg"
+											alt="education"
+										/>
+									</div>
+									<h3>Education</h3>
+									<p>0 Business</p>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide-imgWrap">
+										<img src="/assets/img/busseness-slider.svg" alt="Slide 1" />
+									</div>
+									<h3>Business and Finance</h3>
+									<p>0 Business</p>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide-imgWrap">
+										<img src="/assets/img/health.svg" alt="Slide 1" />
+									</div>
+									<h3>Healthcare and Medicine</h3>
+									<p>0 Business</p>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+						</div>
 					</div>
 				</div>
-			</section>
+
+			</section> 
 
 			<!-- Explore Our Features -->
-			<section class="py">
-				<div class="container">
-					<div class="title">
+			<section>
+				<div class="container feature__section">
+					<div class="feature__heading">
 						<h2>Explore Our <span class="borderBottom">Features </span></h2>
 					</div>
 
@@ -308,7 +339,7 @@
 			<!-- Discover Business section -->
 
 			<section>
-				<div class="container">
+				<div class="container discover__section">
 					<div class="discover">
 						<div class="discover__wrap">
 							<div class="discover__content">
@@ -322,13 +353,11 @@
 							</div>
 							<div class="discover__select">
 								<form action="" class="discover__form">
-									<select name="orderby" id="sort_by" class="classic">
+									<select name="orderby" id="sort_by" class="select classic">
 										<option value="">Sort By</option>
-										<option value="latest">
-												Latest</option>
-										<option value="popularity">Popularity
-										</option>
-								</select>
+										<option value="latest">Latest</option>
+										<option value="popularity">Popularity</option>
+									</select>
 								</form>
 							</div>
 						</div>
@@ -427,7 +456,7 @@
 									</div>
 								</div>
 							</div>
-							<!-- second row -->
+
 							<div class="card">
 								<div class="card__imgWrap">
 									<img src="/assets/img/card-dummy.png" alt="card image" />
@@ -522,7 +551,6 @@
 								</div>
 							</div>
 						</div>
-						<!-- btn  -->
 
 						<div class="discover__btn">
 							<a href="" class="btn btn__primary"> View alll</a>
@@ -532,9 +560,9 @@
 			</section>
 
 			<!-- Pricing Plan -->
-			<section class="py">
-				<div class="container">
-					<div class="title pb">
+			<section>
+				<div class="container price__section">
+					<div class="price__heading">
 						<h3>Pricing <span class="borderBottom">Plan</span></h3>
 					</div>
 
@@ -602,122 +630,124 @@
 				</div>
 			</section>
 			<!-- faq -->
-			<section>
-				<div class="container">
-					<div class="faq">
-						<div class="faq__content">
-							<h2>
-								Frequently Asked <span class="borderBottom">Questions</span>
-							</h2>
-							<div class="faq__title">
-								<p>Can’t find the answer you are looking for?</p>
-								<a href="">Reach out to us</a>
-							</div>
-						</div>
-						<div class="accordion">
-							<div class="accordion-item active">
-								<button class="accordion-header">
-									<span class="accordion-title"
-										>Lorem ipsum dolor sit amet consectetur?</span
-									>
-								</button>
-								<div class="accordion-content">
-									<p>
-										Lorem ipsum dolor sit amet consectetur. Ac urna nunc sodales
-										hendrerit mi nulla. Eu dignissim velit commodo eget sit odio
-										ultrices.amet consectetur. Ac urna nunc sodales hendrerit mi
-										nulla. Eu dignissim velit
-									</p>
+			<section class="faq__section">
+				<div class="faq__wrap">
+					<div class="container">
+						<div class="faq">
+							<div class="faq__content">
+								<h2>
+									Frequently Asked <span class="borderBottom">Questions</span>
+								</h2>
+								<div class="faq__title">
+									<p>Can’t find the answer you are looking for?</p>
+									<a href="">Reach out to us</a>
 								</div>
 							</div>
-							<div class="accordion-item">
-								<button class="accordion-header">
-									<span class="accordion-title"
-										>Suspendisse vitae aliquam arcu, eget tempor nulla?</span
-									>
-								</button>
-								<div class="accordion-content">
-									<p>
-										Lorem ipsum dolor sit amet consectetur. Ac urna nunc sodales
-										hendrerit mi nulla. Eu dignissim velit commodo eget sit odio
-										ultrices.amet consectetur. Ac urna nunc sodales hendrerit mi
-										nulla. Eu dignissim velit
-									</p>
+							<div class="accordion">
+								<div class="accordion-item active">
+									<button class="accordion-header">
+										<span class="accordion-title"
+											>Lorem ipsum dolor sit amet consectetur?</span
+										>
+									</button>
+									<div class="accordion-content">
+										<p>
+											Lorem ipsum dolor sit amet consectetur. Ac urna nunc
+											sodales hendrerit mi nulla. Eu dignissim velit commodo
+											eget sit odio ultrices.amet consectetur. Ac urna nunc
+											sodales hendrerit mi nulla. Eu dignissim velit
+										</p>
+									</div>
 								</div>
-							</div>
-							<div class="accordion-item">
-								<button class="accordion-header">
-									<span class="accordion-title"
-										>Does lubracil contain estrogen?</span
-									>
-								</button>
-								<div class="accordion-content">
-									<p>
-										Lorem ipsum dolor sit amet consectetur. Ac urna nunc sodales
-										hendrerit mi nulla. Eu dignissim velit commodo eget sit odio
-										ultrices.amet consectetur. Ac urna nunc sodales hendrerit mi
-										nulla. Eu dignissim velit
-									</p>
+								<div class="accordion-item">
+									<button class="accordion-header">
+										<span class="accordion-title"
+											>Suspendisse vitae aliquam arcu, eget tempor nulla?</span
+										>
+									</button>
+									<div class="accordion-content">
+										<p>
+											Lorem ipsum dolor sit amet consectetur. Ac urna nunc
+											sodales hendrerit mi nulla. Eu dignissim velit commodo
+											eget sit odio ultrices.amet consectetur. Ac urna nunc
+											sodales hendrerit mi nulla. Eu dignissim velit
+										</p>
+									</div>
 								</div>
-							</div>
-							<div class="accordion-item">
-								<button class="accordion-header">
-									<span class="accordion-title"
-										>Vestibulum sed ultricies justo, ut vulputate lacus?</span
-									>
-								</button>
-								<div class="accordion-content">
-									<p>
-										Lorem ipsum dolor sit amet consectetur. Ac urna nunc sodales
-										hendrerit mi nulla. Eu dignissim velit commodo eget sit odio
-										ultrices.amet consectetur. Ac urna nunc sodales hendrerit mi
-										nulla. Eu dignissim velit
-									</p>
+								<div class="accordion-item">
+									<button class="accordion-header">
+										<span class="accordion-title"
+											>Does lubracil contain estrogen?</span
+										>
+									</button>
+									<div class="accordion-content">
+										<p>
+											Lorem ipsum dolor sit amet consectetur. Ac urna nunc
+											sodales hendrerit mi nulla. Eu dignissim velit commodo
+											eget sit odio ultrices.amet consectetur. Ac urna nunc
+											sodales hendrerit mi nulla. Eu dignissim velit
+										</p>
+									</div>
 								</div>
-							</div>
-							<div class="accordion-item">
-								<button class="accordion-header">
-									<span class="accordion-title"
-										>Mauris tincidunt sem id ante gravida sagittis?</span
-									>
-								</button>
-								<div class="accordion-content">
-									<p>
-										Lorem ipsum dolor sit amet consectetur. Ac urna nunc sodales
-										hendrerit mi nulla. Eu dignissim velit commodo eget sit odio
-										ultrices.amet consectetur. Ac urna nunc sodales hendrerit mi
-										nulla. Eu dignissim velit
-									</p>
+								<div class="accordion-item">
+									<button class="accordion-header">
+										<span class="accordion-title"
+											>Vestibulum sed ultricies justo, ut vulputate lacus?</span
+										>
+									</button>
+									<div class="accordion-content">
+										<p>
+											Lorem ipsum dolor sit amet consectetur. Ac urna nunc
+											sodales hendrerit mi nulla. Eu dignissim velit commodo
+											eget sit odio ultrices.amet consectetur. Ac urna nunc
+											sodales hendrerit mi nulla. Eu dignissim velit
+										</p>
+									</div>
 								</div>
-							</div>
-							<div class="accordion-item">
-								<button class="accordion-header">
-									<span class="accordion-title"
-										>Duis eleifend, erat non finibus pellentesque?</span
-									>
-								</button>
-								<div class="accordion-content">
-									<p>
-										Lorem ipsum dolor sit amet consectetur. Ac urna nunc sodales
-										hendrerit mi nulla. Eu dignissim velit commodo eget sit odio
-										ultrices.amet consectetur. Ac urna nunc sodales hendrerit mi
-										nulla. Eu dignissim velit
-									</p>
+								<div class="accordion-item">
+									<button class="accordion-header">
+										<span class="accordion-title"
+											>Mauris tincidunt sem id ante gravida sagittis?</span
+										>
+									</button>
+									<div class="accordion-content">
+										<p>
+											Lorem ipsum dolor sit amet consectetur. Ac urna nunc
+											sodales hendrerit mi nulla. Eu dignissim velit commodo
+											eget sit odio ultrices.amet consectetur. Ac urna nunc
+											sodales hendrerit mi nulla. Eu dignissim velit
+										</p>
+									</div>
 								</div>
-							</div>
-							<div class="accordion-item">
-								<button class="accordion-header">
-									<span class="accordion-title"
-										>Donec scelerisque posuere urna sed accumsan?</span
-									>
-								</button>
-								<div class="accordion-content">
-									<p>
-										Lorem ipsum dolor sit amet consectetur. Ac urna nunc sodales
-										hendrerit mi nulla. Eu dignissim velit commodo eget sit odio
-										ultrices.amet consectetur. Ac urna nunc sodales hendrerit mi
-										nulla. Eu dignissim velit
-									</p>
+								<div class="accordion-item">
+									<button class="accordion-header">
+										<span class="accordion-title"
+											>Duis eleifend, erat non finibus pellentesque?</span
+										>
+									</button>
+									<div class="accordion-content">
+										<p>
+											Lorem ipsum dolor sit amet consectetur. Ac urna nunc
+											sodales hendrerit mi nulla. Eu dignissim velit commodo
+											eget sit odio ultrices.amet consectetur. Ac urna nunc
+											sodales hendrerit mi nulla. Eu dignissim velit
+										</p>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<button class="accordion-header">
+										<span class="accordion-title"
+											>Donec scelerisque posuere urna sed accumsan?</span
+										>
+									</button>
+									<div class="accordion-content">
+										<p>
+											Lorem ipsum dolor sit amet consectetur. Ac urna nunc
+											sodales hendrerit mi nulla. Eu dignissim velit commodo
+											eget sit odio ultrices.amet consectetur. Ac urna nunc
+											sodales hendrerit mi nulla. Eu dignissim velit
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -786,10 +816,10 @@
 					nextEl: ".swiper-button-next",
 					prevEl: ".swiper-button-prev",
 				},
-				autoplay: {
-					delay: 3000,
-					disableOnInteraction: false,
-				},
+				// autoplay: {
+				// 	delay: 3000,
+				// 	disableOnInteraction: false,
+				// },
 				// breakpoints: {
 				// 	768: {
 				// 		slidesPerView: 3,

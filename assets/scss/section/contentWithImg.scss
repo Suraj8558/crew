@@ -1,9 +1,10 @@
 .digital {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(2, 1fr);
 	gap: 3.125rem;
 	align-items: center;
-	padding: 3rem 0;
+	padding-top: 76px;
+	padding-bottom: 76px;
 
 	&__btn {
 		margin-top: 1rem;
@@ -12,5 +13,18 @@
 	&__contentWrap {
 		position: relative;
 	}
+
+	@include tablet {
+		gap: 1.5rem;
+		padding-top: 50px;
+	 padding-bottom: 50px;
+	}
 	
+	@include allMobile {
+		grid-template-columns: 1fr;
+		gap: 2.125rem;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
 }
