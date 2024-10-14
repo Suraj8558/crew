@@ -226,8 +226,7 @@
 						</div>
 					</div>
 				</div>
-
-			</section> 
+			</section>
 
 			<!-- Explore Our Features -->
 			<section>
@@ -805,8 +804,8 @@
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 		<script>
 			const swiper = new Swiper(".swiper-container", {
-				slidesPerView: 4,
-				spaceBetween: 24,
+				slidesPerView: 1,
+				spaceBetween: 20,
 				loop: true,
 				pagination: {
 					el: ".swiper-pagination",
@@ -820,14 +819,17 @@
 				// 	delay: 3000,
 				// 	disableOnInteraction: false,
 				// },
-				// breakpoints: {
-				// 	768: {
-				// 		slidesPerView: 3,
-				// 	},
-				// 	480: {
-				// 		slidesPerView: 1,
-				// 	},
-				// },
+				breakpoints: {
+					1200: {
+						slidesPerView: 3,
+					},
+					991: {
+						slidesPerView: 2,
+					},
+					768: {
+						slidesPerView: 1,
+					},
+				},
 			});
 		</script>
 		<script src="/assets/js/index.js"></script>

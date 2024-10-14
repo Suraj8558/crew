@@ -495,6 +495,11 @@ p:last-child {
   align-items: center;
   gap: 1rem;
 }
+@media (max-width: 767px) {
+  .nav__menu {
+    display: none;
+  }
+}
 
 .hero {
   display: grid;
@@ -615,6 +620,7 @@ p:last-child {
   border: 1px solid #FFEAD6;
   background: linear-gradient(to bottom, rgba(255, 234, 214, 0.3) 0%, rgb(255, 255, 255) 100%);
   border-radius: 16px;
+  padding-bottom: 10px;
 }
 .feature:last-child {
   margin-bottom: 0;

@@ -11,7 +11,7 @@
 		rgba(255, 234, 214, 0.3) 0%,
 		rgba(255, 255, 255, 1) 100%
 	);
-	
+
 	&:last-child {
     margin-bottom: 0;
   }
@@ -58,6 +58,8 @@
 	&__contentWrap {
 		position: relative;
 	}
+	
+	padding-bottom: 10px; // temprary due to image space issue
 
 	@include smallDesktop {
 		&__imgWrap {

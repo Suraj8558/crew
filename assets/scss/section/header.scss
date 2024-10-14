@@ -44,4 +44,10 @@
     align-items: center;
     gap: 1rem;
   }
+
+  @include allMobile {
+    &__menu {
+      display: none;
+    }
+  }
 }
