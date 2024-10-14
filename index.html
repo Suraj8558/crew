@@ -7,6 +7,10 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<title>Document</title>
 	</head>
@@ -67,7 +71,35 @@
 					</div>
 				</div>
 			</section>
-
+					<!-- form section -->
+					<div class="container"> 
+						<form role="search" method="get" class="search-form" id="product_search" action="https://connectcrew.in/directory/search"></form>
+							<div class="search_box search-box">
+								<input type="hidden" name="post_type" value="product">
+								<input type="search" class="search-field" placeholder="Search for any Business..." value="" name="search-business">
+								<select class="select-box " required="required" name="category">
+									<option value="11">Healthcare and Medicine</option>
+									<option value="12">Information Technology</option>
+									<option value="13">Education</option>
+									<option value="14">Business and Finance</option>
+									<option value="15">Engineering</option>
+									<option value="16">Creative Arts and Design</option>
+									<option value="17">Legal</option>
+									<option value="18">Science and Research</option>
+									<option value="19">Trades and Craftsmanship</option>
+									<option value="20">Hospitality and Tourism</option>
+									<option value="21">Public Services and Administration</option>
+									<option value="22">Media and Communications</option>
+									<option value="23">Agriculture and Environment</option>
+									<option value="24">Individual Profile</option>
+								</select>
+								<button type="submit" class="btn btn__primary search-btn">
+								<span>Search</span>
+								</button>
+							</div>
+						</form>
+					</div>
+					
 			<!-- Your Path to Digital section  -->
 			<section>
 				<div class="container">
@@ -106,8 +138,68 @@
 				</div>
 			</section>
 
+			<!-- swiper -->
+			<section class="slider">
+				<div class="container">
+					<div class="slider-content">
+						<h2 class="slider-title">Top Categories</h2>
+						<p>
+							Discover a diverse range of top categories on vCardgo.Find
+							evenything you need in one convenient place.
+						</p>
+					</div>
+				</div>
+				<div class="swiper-section">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="swiper-slide-imgWrap">
+									<img src="/assets/img/health.svg" alt="health" />
+								</div>
+								<h3>Healthcare and Medicine</h3>
+								<p>0 Business</p>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-slide-imgWrap">
+									<img src="/assets/img/information.svg" alt="information" />
+								</div>
+								<h3>Information Technology</h3>
+								<p>0 Business</p>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-slide-imgWrap">
+									<img
+										src="/assets/img/education_31979101.svg"
+										alt="education"
+									/>
+								</div>
+								<h3>Education</h3>
+								<p>0 Business</p>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-slide-imgWrap">
+									<img src="/assets/img/busseness-slider.svg" alt="Slide 1" />
+								</div>
+								<h3>Business and Finance</h3>
+								<p>0 Business</p>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-slide-imgWrap">
+									<img src="/assets/img/health.svg" alt="Slide 1" />
+								</div>
+								<h3>Healthcare and Medicine</h3>
+								<p>0 Business</p>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+			</section>
+
 			<!-- Explore Our Features -->
-			<section>
+			<section class="py">
 				<div class="container">
 					<div class="title">
 						<h2>Explore Our <span class="borderBottom">Features </span></h2>
@@ -228,7 +320,17 @@
 									in one convenient platform.
 								</p>
 							</div>
-							<div class="discover__select"></div>
+							<div class="discover__select">
+								<form action="" class="discover__form">
+									<select name="orderby" id="sort_by" class="classic">
+										<option value="">Sort By</option>
+										<option value="latest">
+												Latest</option>
+										<option value="popularity">Popularity
+										</option>
+								</select>
+								</form>
+							</div>
 						</div>
 
 						<div class="discover__cards">
@@ -670,6 +772,34 @@
 				</div>
 			</footer>
 		</main>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script>
+			const swiper = new Swiper(".swiper-container", {
+				slidesPerView: 4,
+				spaceBetween: 24,
+				loop: true,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+				// breakpoints: {
+				// 	768: {
+				// 		slidesPerView: 3,
+				// 	},
+				// 	480: {
+				// 		slidesPerView: 1,
+				// 	},
+				// },
+			});
+		</script>
 		<script src="/assets/js/index.js"></script>
 	</body>
 </html>

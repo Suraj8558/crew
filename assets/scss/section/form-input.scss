@@ -1,0 +1,31 @@
+select {
+  background-color: #F6F6F6;
+  border: thin solid transparent;
+  border-radius: 6px;
+  display: inline-block;
+  font: inherit;
+  padding: 1em 3.5em 1em 1em;
+  appearance: none;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #666968;
+  width: 100%;
+
+  &.classic {  
+    background-image: url('/assets/img/arrow-down.svg'); 
+    background-position: calc(100% - 1rem);
+    background-size:
+      14px 10px;
+    background-repeat: no-repeat;
+
+    &:focus {
+      border-color: grey;
+      outline: 0;
+    }
+
+  }
+}
+
+
+

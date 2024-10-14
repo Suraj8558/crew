@@ -7,9 +7,11 @@
 		gap: 0.938rem;
 		padding-bottom: 3.125rem;
 	}
+
   &__btn {
    text-align: center;
   }
+
 	&__cards {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -85,4 +87,10 @@
       }
 		}
 	}
+
+  &__form {
+    max-width: 267px;
+    width: 100%;
+    margin-left: auto;
+  }
 }
