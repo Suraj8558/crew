@@ -15,6 +15,7 @@
 	&:last-child {
     margin-bottom: 0;
   }
+
 	border-radius: 16px;
 
 	&__section {
@@ -81,6 +82,8 @@
 
 	@include allMobile {
 		margin-bottom: 24px;
+		padding-bottom: 2rem;
+		gap: 1rem;
 		flex-direction: column;
 		&__imgWrap {
 			width: 100%;

@@ -27,8 +27,8 @@ select {
 	}
 
 	@include allMobile {
-    &.select {
-      padding: .5em 3.5em .5em 1em; 
-    }
+		&.select {
+			padding: 0.5em 3.5em 0.5em 1em;
+		}
 	}
 }

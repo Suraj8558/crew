@@ -26,10 +26,10 @@
 
 			&.border {
 				position: relative;
+				display: inline-block;
 
 				&::before {
 					content: "";
-
 					position: absolute;
 					background: $primaryColor;
 					width: 100%;
@@ -51,6 +51,68 @@
 		img {
 			scale: 1.13;
 			transform-origin: left;
+		}
+	}
+
+	@include tablet {
+		&__title {
+			font-size: 30px;
+			line-height: 120%;
+
+			&::before {
+				width: 80px;
+				height: 80px;
+				transform: translate(28%, -48%);
+			}
+
+			span {
+				font-size: 35px;
+				line-height: 120%;
+				display: inline-block;
+
+				&.border {
+					display: inline-block;
+					&::before {
+					content: "";
+						bottom: 2px;
+					}
+
+				}
+			}
+		}
+	}
+
+	@include allMobile {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+
+		&__imgWrap {
+			img {
+				scale: initial;
+				transform-origin: initial;
+			}
+		}
+
+		&__title {
+			font-size: 25px;
+			line-height: 120%;
+			&::before {
+				width: 60px;
+				height: 60px;
+				transform: translate(108%, -47%);
+        left: 50%;
+
+			}
+
+			span {
+				font-size: 30px;
+				line-height: 120%;
+				display: inline-block;
+
+				&.border {
+					display: inline-block;
+				}
+			}
 		}
 	}
 }

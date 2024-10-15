@@ -20,8 +20,9 @@
 			color: $primaryColor;
 			border-color: $primaryColor;
 			svg {
-				fill: $primaryColor;
-				stroke:  $primaryColor;
+				g {
+					fill: $primaryColor;
+				}
 			}
 		}
 	}

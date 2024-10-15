@@ -1,53 +1,92 @@
 .nav {
-  padding: 1.157rem 0;
-  &__logo {
-    img {
-      width: 170px;
-      height: auto;
-    }
-  }
+	padding: 1.157rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	&__logo {
+		img {
+			width: 170px;
+			height: auto;
+		}
+	}
 
-  &__menu {
-    li {
-      list-style: none;
-      display: inline-block;
-  
-      a {
-        color: $textColor;
-        padding: 1rem 0.938rem;
-        line-height: 1.5rem;
-        position: relative;
+	&__toggle {
+		display: none;
+	}
 
-        &.active {
-          color: $titleColor;
-        }
+	&__menu {
+		display: flex;
+		gap: 1rem;
 
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          width: fit-content;
-          height: 1px;
-          background-color: $primaryColor;
+		li {
+			list-style: none;
+			display: inline-block;
 
-        }
-      }
-    }
-  }
+			a {
+				color: $textColor;
+				padding: 1rem 0.938rem;
+				line-height: 1.5rem;
+				display: block;
+				position: relative;
 
-  &__btn {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
+				&.active {
+					color: $titleColor;
+				}
 
-  @include allMobile {
-    &__menu {
-      display: none;
-    }
-  }
+				&::after {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					width: fit-content;
+					height: 1px;
+					background-color: $primaryColor;
+				}
+			}
+		}
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	&__toggle {
+		display: none;
+		background: none;
+		border: none;
+		cursor: pointer;
+	}
+
+	@include tablet {
+		&__toggle {
+			display: block;
+		}
+
+		&__menu {
+			position: absolute;
+			top: 100%;
+			right: 0;
+			background: #ff00f0;
+			width: 100%;
+			height: 0;
+			overflow: hidden;
+			flex-direction: column;
+			align-items: center;
+			transition: height 0.3s ease;
+		}
+
+		&__btn {
+			display: none;
+		}
+
+		&__toggle {
+			display: inline-block;
+		}
+
+		&--open .nav__menu {
+			height: 240px; // Adjust the height based on content
+		}
+	}
 }

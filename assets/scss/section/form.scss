@@ -1,6 +1,6 @@
 .form {
-  padding-top: 1rem;
-  padding-bottom: 76px;
+	padding-top: 1rem;
+	padding-bottom: 76px;
 
 	&__btn {
 		display: flex;
@@ -20,8 +20,8 @@
 		width: 100%;
 		max-width: 486px;
 		display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0;
 		align-items: center;
 	}
 
@@ -35,63 +35,111 @@
 		justify-content: space-between;
 	}
 
-  &__buisness {
-    border: none;
-    outline: none;
-    max-width: 244px;
-  }
-  &__options {
+	&__buisness {
+		border: none;
+		outline: none;
+		max-width: 244px;
+	}
+	&__options {
+		width: 100%;
+		max-width: 242px;
+		position: relative;
+		padding-left: 60px;
+
+		&::before {
+			content: "";
+			background: radial-gradient(
+				circle,
+				rgb(244, 180, 26) 0%,
+				rgb(255, 255, 255) 100%
+			);
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			position: absolute;
+			height: 42px;
+			width: 1px;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background-image: url("/assets/img/arrow-down.svg");
+			background-size: 10px;
+			background-repeat: no-repeat;
+			width: 20px;
+			height: 20px;
+			transition: transform 0.3s ease;
+			background-position: center center;
+		}
+
+		&:hover:after {
+			transform: translateY(-50%) rotate(180deg);
+		}
+	}
+
+	& select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		padding: 10px;
+		cursor: pointer;
+		border: none;
+		outline: none;
+		background: transparent;
+		padding: 10px 20px 10px 10px;
+		font-size: 14px;
+		color: #293240;
     width: 100%;
     max-width: 242px;
-    position: relative;
-    padding-left: 60px;
+	}
 
-    &::before {
-      content: "";
-      background: radial-gradient(circle, rgb(244, 180, 26) 0%, rgb(255, 255, 255) 100%);
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
-      position: absolute;
-      height: 42px;
-      width: 1px;
+	@include tablet {
+		&__wrapper {
+		}
+		&__btn {
+			width: fit-content;
+		}
+	}
 
+	@include allMobile {
+		&__wrapper {
+			flex-direction: column;
+			gap: 1rem;
+      padding: 1rem;
+		}
+
+		&__btn {
+			width: 100%;
+		}
+
+    & select {
+      width: 100%;
+      max-width: 100%;
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background-image: url("/assets/img/arrow-down.svg");
-      background-size: 10px;
-      background-repeat: no-repeat;
-      width: 20px;
-      height: 20px;
-      transition: transform 0.3s ease;
-      background-position: center center;
+		&__options {
+			padding: 0;
+			max-width: 100%;
+			width: 100%;
+
+      &::before {
+        display: none;
+      }
+		}
+
+    &__element {
+      grid-template-columns: 1fr;
     }
 
-    &:hover:after {
-      transform: translateY(-50%) rotate(180deg);
-    }
-
-  }
-
-  & select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: transparent;
-    padding: 10px 20px 10px 10px;
-    font-size: 14px;
-    color: #293240;
-  }
-  
+		&__buisness {
+			border: none;
+			outline: none;
+			max-width: 100%;
+      padding: 16px 10px;
+		}
+	}
 }
-

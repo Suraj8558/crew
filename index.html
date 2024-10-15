@@ -7,12 +7,11 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css"
 		/>
-		<link
-			rel="stylesheet"
-			href="https://unpkg.com/swiper/swiper-bundle.min.css"
-		/>
+		<!-- Swiper CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
 		<link rel="stylesheet" href="./assets/css/style.css" />
-		<title>Document</title>
+		<title>ConnectCrew</title>
 	</head>
 	<body>
 		<main class="main">
@@ -22,6 +21,7 @@
 					<div class="nav__logo">
 						<img src="/assets/img/site_logo.svg" alt="site logo" />
 					</div>
+						
 					<ul class="nav__menu">
 						<li><a href="#Home" class="active">Home</a></li>
 						<li><a href="#About Us">About Us</a></li>
@@ -110,18 +110,7 @@
 							</div>
 						</div>
 						<button type="submit" class="btn btn__primary form__btn">
-							<!-- <svg
-								width="20"
-								height="20"
-								viewBox="0 0 20 20"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M19.8107 18.9121L14.6469 13.8309C15.999 12.3617 16.8299 10.4187 16.8299 8.28064C16.8293 3.70697 13.0621 -0.000202179 8.41464 -0.000202179C3.7672 -0.000202179 0 3.70697 0 8.28064C0 12.8543 3.7672 16.5615 8.41464 16.5615C10.4227 16.5615 12.2644 15.867 13.711 14.7123L18.8949 19.8135C19.1474 20.0624 19.5574 20.0624 19.81 19.8135C20.0632 19.5648 20.0632 19.161 19.8107 18.9121ZM8.41464 15.2874C4.48241 15.2874 1.29471 12.1504 1.29471 8.28064C1.29471 4.4109 4.48241 1.27386 8.41464 1.27386C12.347 1.27386 15.5346 4.4109 15.5346 8.28064C15.5346 12.1504 12.347 15.2874 8.41464 15.2874Z"
-									fill="#F4B41A"
-								/>
-							</svg> -->
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="20px" height="20px" fill-rule="nonzero"><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M13,3c-5.511,0 -10,4.489 -10,10c0,5.511 4.489,10 10,10c2.39651,0 4.59738,-0.85101 6.32227,-2.26367l5.9707,5.9707c0.25082,0.26124 0.62327,0.36648 0.97371,0.27512c0.35044,-0.09136 0.62411,-0.36503 0.71547,-0.71547c0.09136,-0.35044 -0.01388,-0.72289 -0.27512,-0.97371l-5.9707,-5.9707c1.41266,-1.72488 2.26367,-3.92576 2.26367,-6.32227c0,-5.511 -4.489,-10 -10,-10zM13,5c4.43012,0 8,3.56988 8,8c0,4.43012 -3.56988,8 -8,8c-4.43012,0 -8,-3.56988 -8,-8c0,-4.43012 3.56988,-8 8,-8z"></path></g></g></svg>
 							<span>Search</span>
 						</button>
 					</div>
@@ -182,21 +171,27 @@
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
-									<div class="swiper-slide-imgWrap">
-										<img src="/assets/img/health.svg" alt="health" />
+									<div class="swiper-slide-wrap">
+										<div class="swiper-slide-imgWrap">
+											<img src="/assets/img/health.svg" alt="health" />
+										</div>
+										<h3>Healthcare and Medicine</h3>
+										<p>0 Business</p>
 									</div>
-									<h3>Healthcare and Medicine</h3>
-									<p>0 Business</p>
 								</div>
 								<div class="swiper-slide">
-									<div class="swiper-slide-imgWrap">
+									<div class="swiper-slide-wrap">
+										<div class="swiper-slide-imgWrap">
 										<img src="/assets/img/information.svg" alt="information" />
 									</div>
 									<h3>Information Technology</h3>
 									<p>0 Business</p>
+									</div>
+									
 								</div>
 								<div class="swiper-slide">
-									<div class="swiper-slide-imgWrap">
+									<div class="swiper-slide-wrap">
+											<div class="swiper-slide-imgWrap">
 										<img
 											src="/assets/img/education_31979101.svg"
 											alt="education"
@@ -204,20 +199,28 @@
 									</div>
 									<h3>Education</h3>
 									<p>0 Business</p>
+									</div>
+									
 								</div>
 								<div class="swiper-slide">
-									<div class="swiper-slide-imgWrap">
+									<div class="swiper-slide-wrap">
+											<div class="swiper-slide-imgWrap">
 										<img src="/assets/img/busseness-slider.svg" alt="Slide 1" />
 									</div>
 									<h3>Business and Finance</h3>
 									<p>0 Business</p>
+									</div>
+									
 								</div>
 								<div class="swiper-slide">
-									<div class="swiper-slide-imgWrap">
+									<div class="swiper-slide-wrap">
+										<div class="swiper-slide-imgWrap">
 										<img src="/assets/img/health.svg" alt="Slide 1" />
 									</div>
 									<h3>Healthcare and Medicine</h3>
 									<p>0 Business</p>
+									</div>
+									
 								</div>
 							</div>
 							<div class="swiper-pagination"></div>
@@ -643,13 +646,13 @@
 								</div>
 							</div>
 							<div class="accordion">
-								<div class="accordion-item active">
-									<button class="accordion-header">
-										<span class="accordion-title"
+								<div class="accordion__item accordion--active"">
+									<button class="accordion__header">
+										<span class="accordion__title"
 											>Lorem ipsum dolor sit amet consectetur?</span
 										>
 									</button>
-									<div class="accordion-content">
+									<div class="accordion__content">
 										<p>
 											Lorem ipsum dolor sit amet consectetur. Ac urna nunc
 											sodales hendrerit mi nulla. Eu dignissim velit commodo
@@ -658,13 +661,13 @@
 										</p>
 									</div>
 								</div>
-								<div class="accordion-item">
-									<button class="accordion-header">
-										<span class="accordion-title"
+								<div class="accordion__item">
+									<button class="accordion__header">
+										<span class="accordion__title"
 											>Suspendisse vitae aliquam arcu, eget tempor nulla?</span
 										>
 									</button>
-									<div class="accordion-content">
+									<div class="accordion__content">
 										<p>
 											Lorem ipsum dolor sit amet consectetur. Ac urna nunc
 											sodales hendrerit mi nulla. Eu dignissim velit commodo
@@ -673,13 +676,13 @@
 										</p>
 									</div>
 								</div>
-								<div class="accordion-item">
-									<button class="accordion-header">
-										<span class="accordion-title"
+								<div class="accordion__item">
+									<button class="accordion__header">
+										<span class="accordion__title"
 											>Does lubracil contain estrogen?</span
 										>
 									</button>
-									<div class="accordion-content">
+									<div class="accordion__content">
 										<p>
 											Lorem ipsum dolor sit amet consectetur. Ac urna nunc
 											sodales hendrerit mi nulla. Eu dignissim velit commodo
@@ -688,13 +691,13 @@
 										</p>
 									</div>
 								</div>
-								<div class="accordion-item">
-									<button class="accordion-header">
-										<span class="accordion-title"
+								<div class="accordion__item">
+									<button class="accordion__header">
+										<span class="accordion__title"
 											>Vestibulum sed ultricies justo, ut vulputate lacus?</span
 										>
 									</button>
-									<div class="accordion-content">
+									<div class="accordion__content">
 										<p>
 											Lorem ipsum dolor sit amet consectetur. Ac urna nunc
 											sodales hendrerit mi nulla. Eu dignissim velit commodo
@@ -703,13 +706,13 @@
 										</p>
 									</div>
 								</div>
-								<div class="accordion-item">
-									<button class="accordion-header">
-										<span class="accordion-title"
+								<div class="accordion__item">
+									<button class="accordion__header">
+										<span class="accordion__title"
 											>Mauris tincidunt sem id ante gravida sagittis?</span
 										>
 									</button>
-									<div class="accordion-content">
+									<div class="accordion__content">
 										<p>
 											Lorem ipsum dolor sit amet consectetur. Ac urna nunc
 											sodales hendrerit mi nulla. Eu dignissim velit commodo
@@ -718,13 +721,13 @@
 										</p>
 									</div>
 								</div>
-								<div class="accordion-item">
-									<button class="accordion-header">
-										<span class="accordion-title"
+								<div class="accordion__item">
+									<button class="accordion__header">
+										<span class="accordion__title"
 											>Duis eleifend, erat non finibus pellentesque?</span
 										>
 									</button>
-									<div class="accordion-content">
+									<div class="accordion__content">
 										<p>
 											Lorem ipsum dolor sit amet consectetur. Ac urna nunc
 											sodales hendrerit mi nulla. Eu dignissim velit commodo
@@ -733,13 +736,13 @@
 										</p>
 									</div>
 								</div>
-								<div class="accordion-item">
-									<button class="accordion-header">
-										<span class="accordion-title"
+								<div class="accordion__item">
+									<button class="accordion__header">
+										<span class="accordion__title"
 											>Donec scelerisque posuere urna sed accumsan?</span
 										>
 									</button>
-									<div class="accordion-content">
+									<div class="accordion__content">
 										<p>
 											Lorem ipsum dolor sit amet consectetur. Ac urna nunc
 											sodales hendrerit mi nulla. Eu dignissim velit commodo
@@ -801,36 +804,42 @@
 				</div>
 			</footer>
 		</main>
-		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
 		<script>
-			const swiper = new Swiper(".swiper-container", {
-				slidesPerView: 1,
-				spaceBetween: 20,
-				loop: true,
-				pagination: {
-					el: ".swiper-pagination",
-					clickable: true,
-				},
-				navigation: {
-					nextEl: ".swiper-button-next",
-					prevEl: ".swiper-button-prev",
-				},
-				// autoplay: {
-				// 	delay: 3000,
-				// 	disableOnInteraction: false,
-				// },
+			var swiper = new Swiper('.swiper-container', {
+			slidesPerView: 1, // Default value
+			spaceBetween: 30,
+			loop: true, 
 				breakpoints: {
 					1200: {
+						slidesPerView: 4,
+					},
+					1024: {
 						slidesPerView: 3,
 					},
 					991: {
-						slidesPerView: 2,
+						slidesPerView: 3,
 					},
 					768: {
+						slidesPerView: 2,
+					},
+					767: {
 						slidesPerView: 1,
+						spaceBetween: 50,
 					},
 				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
 			});
+
 		</script>
 		<script src="/assets/js/index.js"></script>
 	</body>

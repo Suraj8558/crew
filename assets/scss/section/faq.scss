@@ -1,108 +1,132 @@
-
 .faq {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 2.125rem;
+	display: grid;
+	grid-template-columns: 1fr 1.4fr;
+	gap: 2.125rem;
 
-  &__section {
-    padding-top: 80px;
-  }
-  &__wrap {
-    background: #F6F6F6;
-    padding: 100px 0;
-  }
+	&__section {
+		padding-top: 80px;
+	}
 
-  &__title {
-    p {
-      margin-bottom: 0;
-    }
-    a {
-      font-weight: $fontBold;
-      color: $primaryColor;
-    }
-  }
+	&__wrap {
+		background: #f6f6f6;
+		padding: 100px 0;
+	}
+
+	&__title {
+		p {
+			margin-bottom: 0;
+		}
+
+		a {
+			font-weight: $fontBold;
+			color: $primaryColor;
+		}
+	}
 }
 
 .accordion {
-  width: 100%;
+	width: 100%;
 
-  .accordion-item {
-    border: 1px solid #6669684D;
-    padding: 13.5px 21px;
-    border-radius: 12px;
-    &:not(:last-child) {
-      margin-bottom: 19px;
-    }
+	&__item {
+		border: 1px solid #6669684d;
+		padding: 13.5px 21px;
+		border-radius: 12px;
+		transition: 0.3s ease;
 
-    .accordion-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: transparent;
-      cursor: pointer;
-      border: none;
-      width: 100%;
-      text-align: left;
-      position: relative;
-      padding: 0;
+		&:not(:last-child) {
+			margin-bottom: 19px;
+		}
+	}
 
-      .accordion-title {
-        flex: 1;
-        padding-right: 30px;
-        position: relative;
-        font-size: 1.25rem;
-        line-height: 140%;
-        font-weight: $fontBold;
-        
-        &::before {
-          content: ""; 
-          background-image: url('/assets/img/arrow-down.svg');
-          background-repeat: no-repeat;
-          background-position: center;
-          width: 28px;
-          height: 28px;
-          position: absolute;
-          right: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          font-size: 18px;
-          color: #333;
-          transition: transform 0.3s ease;
-        }
-      }
-    }
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: transparent;
+		cursor: pointer;
+		border: none;
+		width: 100%;
+		text-align: left;
+		position: relative;
+		padding: 0;
+	}
 
-    .accordion-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-      p {
-        margin-top: 4px;
-        padding-right: 30px;
+	&__title {
+		flex: 1;
+		padding-right: 30px;
+		position: relative;
+		font-size: 1.25rem;
+		line-height: 140%;
+		font-weight: $fontBold;
 
-      }
-    }
+		&::before {
+			content: "";
+			background-image: url("/assets/img/arrow-down.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 28px;
+			height: 28px;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: transform 0.3s ease;
+		}
+	}
 
-    &.active {
-      background: #F6F6F6;
-      border-color: transparent;
-      box-shadow: 0px 0px 16px 0px #0000001A;
+	&__content {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease;
 
-      .accordion-header .accordion-title {
-        padding-bottom: 0px;
-        &::before {
-        transform: rotate(180deg)translateY(50%);
-        }
-      }
+		p {
+			margin-top: 4px;
+			padding-right: 30px;
+		}
+	}
 
-      .accordion-content {
-        max-height: 100px;
-      }
-    }
-  }
+	&--active {
+		background: #f6f6f6;
+		border-color: transparent;
+		box-shadow: 0px 0px 16px 0px #0000001a;
+		transition: 0.3s ease;
+
+		&__header &__title {
+			padding-bottom: 0;
+
+			&::before {
+				transform: rotate(180deg) translateY(50%);
+			}
+		}
+
+		&__content {
+			max-height: 1000px;
+		}
+	}
 }
+
+@include tablet {
+	.faq {
+		grid-template-columns: 1fr;
+	}
+}
+
 @include allMobile {
-  .faq {
-    grid-template-columns: 1fr;
-  }
+	.faq {
+		grid-template-columns: 1fr;
+	}
+
+	.accordion {
+		&__title {
+			font-size: 16px;
+			line-height: 1;
+		}
+
+		&__content {
+			p {
+				font-size: 14px;
+				line-height: 150%;
+			}
+		}
+	}
 }

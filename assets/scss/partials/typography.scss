@@ -76,16 +76,13 @@ h2, .h2 {
     font-size: 45px;
   }
   @media (max-width: 991px) {
-    font-size: 40px;
+    font-size: 30px;
   }
   @media (max-width: 767px) {
-    font-size: 35px;
+    font-size: 28px;
     margin-bottom: 20px;
   }
   @media (max-width: 575px) {
-    font-size: 30px;
-  }
-  @media (max-width: 480px) {
     font-size: 26px;
   }
 }
@@ -123,18 +120,13 @@ h4, .h4 {
   color: var(--titleColor);
 
   @media (max-width: 991px) {
-    font-size: 30px;
-  }
-  @media (max-width: 767px) {
-    font-size: 27px;
-    margin-bottom: 14;
-  }
-  @media (max-width: 575px) {
-    font-size: 24px;
-  }
-  @media (max-width: 480px) {
     font-size: 22px;
   }
+  @media (max-width: 767px) {
+    font-size: 20px;
+    margin-bottom: 14;
+  }
+ 
 }
 h5, .h5 {
   font-family: $primaryFont;

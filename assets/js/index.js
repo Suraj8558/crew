@@ -1,15 +1,37 @@
-const accordionItems = document.querySelectorAll(".accordion-item");
+// Select all accordion headers
+const accordionHeaders = document.querySelectorAll(".accordion__header");
 
-accordionItems.forEach((item) => {
-	const header = item.querySelector(".accordion-header");
-	header.addEventListener("click", () => {
-		const openItem = document.querySelector(".accordion-item.active");
+// Open the first accordion by default
+const firstAccordionItem = document.querySelector(".accordion__item");
+const firstAccordionContent = firstAccordionItem.querySelector(
+	".accordion__content"
+);
+firstAccordionItem.classList.add("accordion--active");
+firstAccordionContent.style.maxHeight =
+	firstAccordionContent.scrollHeight + "px";
 
-		if (openItem && openItem !== item) {
-			openItem.classList.remove("active");
+// Add event listener to each accordion header
+accordionHeaders.forEach((accordionHeader) => {
+	accordionHeader.addEventListener("click", () => {
+		const accordionItem = accordionHeader.parentElement;
+		const accordionContent = accordionItem.querySelector(".accordion__content");
+
+		// Close all other accordion items
+		document.querySelectorAll(".accordion__item").forEach((item) => {
+			if (item !== accordionItem) {
+				item.classList.remove("accordion--active");
+				item.querySelector(".accordion__content").style.maxHeight = null; // Collapse
+			}
+		});
+
+		// Toggle active class on the clicked accordion item
+		accordionItem.classList.toggle("accordion--active");
+
+		// Expand or collapse the content of the clicked accordion item
+		if (accordionItem.classList.contains("accordion--active")) {
+			accordionContent.style.maxHeight = accordionContent.scrollHeight + "px"; // Expand
+		} else {
+			accordionContent.style.maxHeight = null; // Collapse
 		}
-
-		item.classList.toggle("active");
 	});
 });
-
