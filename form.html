@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/assets/css/style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- header -->
+		<header class="header">
+			<div class="container form__container">
+				<nav class="header__nav">
+					<div class="nav__logo">
+						<img src="/assets/img/site_logo.svg" alt="site logo" />
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<div class="container form__container">
+			<div class="form">
+				<form id="multi-step-form" class="form__steps">
+					<!-- Step 1 -->
+					<div class="form__step form__step--active" id="step-1">
+						<div class="form__card">
+							<div class="form__card__img">
+								<img src="/assets/img/sign-up.png" alt="form-sign-up" />
+							</div>
+
+							<div class="form__card__content">
+								<h2 class="form__title">
+									Sign Up for <span class="border">ConnectCrew</span>
+								</h2>
+								<p class="form__desc">
+									Effortlessly create your business profile, build a website,
+									and go live within minutes.
+								</p>
+								<div class="form__item">
+									<label for="name" class="form__label">Name</label>
+									<input
+										type="text"
+										id="name"
+										name="name"
+										class="form__input"
+										placeholder="Enter your name"
+										required
+									/>
+								</div>
+								<div class="form__item">
+									<label for="password" class="form__label">Password</label>
+									<input
+										type="password"
+										id="password"
+										name="password"
+										class="form__input"
+										placeholder="Enter your password"
+										required
+									/>
+								</div>
+								<div class="form__item">
+									<label for="confirm-password" class="form__label"
+										>Confirm Password</label
+									>
+									<div class="form__password-wrapper">
+										<input
+											type="password"
+											id="confirm-password"
+											name="confirm-password"
+											class="form__input form__input__pass"
+											placeholder="Confirm your password"
+											required
+										/>
+										<span id="toggle-password" class="form__input__icon">
+											<!-- Open eye SVG for showing password -->
+											<svg
+												width="24"
+												height="24"
+												id="eye-icon"
+												class="open-eye"
+												viewBox="0 0 24 24"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<g opacity="0.5">
+													<path
+														d="M10.9556 4.57398C11.3771 4.52508 11.8012 4.5007 12.2256 4.50098C16.8896 4.50098 20.6256 7.40398 22.2256 11.501C21.8383 12.4976 21.315 13.4358 20.6706 14.289M6.74559 6.01998C4.70559 7.26498 3.12559 9.19398 2.22559 11.501C3.82559 15.598 7.56159 18.501 12.2256 18.501C14.1577 18.5112 16.0548 17.985 17.7056 16.981M10.1056 9.38098C9.82699 9.65958 9.60599 9.99032 9.45521 10.3543C9.30444 10.7183 9.22683 11.1085 9.22683 11.5025C9.22683 11.8965 9.30444 12.2866 9.45521 12.6506C9.60599 13.0146 9.82699 13.3454 10.1056 13.624C10.3842 13.9026 10.7149 14.1236 11.0789 14.2744C11.4429 14.4251 11.8331 14.5027 12.2271 14.5027C12.6211 14.5027 13.0112 14.4251 13.3752 14.2744C13.7392 14.1236 14.07 13.9026 14.3486 13.624"
+														stroke="#273240"
+														stroke-width="2"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+													/>
+													<path
+														d="M4.22559 3.50098L20.2256 19.501"
+														stroke="#273240"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</g>
+											</svg>
+											<!-- Closed eye SVG for hiding password (initially hidden) -->
+
+											<svg
+												width="24"
+												height="24"
+												id="eye-icon-closed"
+												class="close-eye hidden"
+												viewBox="0 0 22 16"
+											>
+												<path
+													d="M11 5C10.2044 5 9.44129 5.31607 8.87868 5.87868C8.31607 6.44129 8 7.20435 8 8C8 8.79565 8.31607 9.55871 8.87868 10.1213C9.44129 10.6839 10.2044 11 11 11C11.7956 11 12.5587 10.6839 13.1213 10.1213C13.6839 9.55871 14 8.79565 14 8C14 7.20435 13.6839 6.44129 13.1213 5.87868C12.5587 5.31607 11.7956 5 11 5ZM11 13C9.67392 13 8.40215 12.4732 7.46447 11.5355C6.52678 10.5979 6 9.32608 6 8C6 6.67392 6.52678 5.40215 7.46447 4.46447C8.40215 3.52678 9.67392 3 11 3C12.3261 3 13.5979 3.52678 14.5355 4.46447C15.4732 5.40215 16 6.67392 16 8C16 9.32608 15.4732 10.5979 14.5355 11.5355C13.5979 12.4732 12.3261 13 11 13ZM11 0.5C6 0.5 1.73 3.61 0 8C1.73 12.39 6 15.5 11 15.5C16 15.5 20.27 12.39 22 8C20.27 3.61 16 0.5 11 0.5Z"
+													fill="#F4B41A"
+												/>
+											</svg>
+										</span>
+									</div>
+								</div>
+								<button
+									type="button"
+									class="btn btn__primary form__button form__button--next"
+								>
+									Sign Up
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Step 2 -->
+					<div class="form__step" id="step-2">
+						<div class="form__header">
+							<h2 class="form__title">
+								Tell Us About<span class="border"> Your Business </span>
+							</h2>
+							<p class="form__desc">
+								Effortlessly create your business profile, build a website, and
+								go live within minutes.
+							</p>
+						</div>
+
+						<div class="form__items--step2">
+							<div class="form__item">
+								<label for="name" class="form__label">Name</label>
+								<input
+									type="text"
+									id="name"
+									name="name"
+									class="form__input"
+									placeholder="Enter your name"
+									required
+								/>
+							</div>
+							<div class="form__item">
+								<label for="password" class="form__label">Password</label>
+								<input
+									type="password"
+									id="password"
+									name="password"
+									class="form__input"
+									placeholder="Enter your password"
+									required
+								/>
+							</div>
+							<button
+								type="button"
+								class="btn btn__primary form__button form__button--next"
+							>
+								Sign Up
+							</button>
+						</div>
+					</div>
+
+					<!-- Step 3 -->
+					<div class="form__step" id="step-3">
+						<h2 class="form__title">Step 3</h2>
+						<label for="password" class="form__label">Password</label>
+						<input
+							type="password"
+							id="password"
+							name="password"
+							class="form__input"
+							required
+						/>
+						<button type="button" class="form__button form__button--prev">
+							Previous
+						</button>
+						<button type="submit" class="form__button">Submit</button>
+					</div>
+				</form>
+			</div>
+			<!-- Progress Dots and Step Counter -->
+			<div class="form__progress">
+				<div class="form__progress__wrap">
+					<div class="form__dots">
+						<span class="form__dot form__dot--active"></span>
+						<span class="form__dot"></span>
+						<span class="form__dot"></span>
+					</div>
+					<div class="form__counter">
+						<span id="current-step" class="form__current-step">1</span>/<span
+							id="total-steps"
+							class="form__total-steps"
+							>3</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/assets/js/form.js"></script>
+	</body>
+</html>

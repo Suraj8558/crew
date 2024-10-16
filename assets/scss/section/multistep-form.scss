@@ -1,0 +1,211 @@
+$form-bg-color: #f4f4f4;
+$primary-color: #3498db;
+$dot-color: #e0e0e0;
+$dot-active-color: $primary-color;
+.header {
+	box-shadow: 0px 12px 40px 0px #0000000f;
+
+	&__nav {
+		padding: 29px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.form {
+	&__container {
+		max-width: 1300px;
+	}
+	&__title {
+		font-size: 3.75rem;
+		line-height: 120%;
+		font-weight: $fontBold;
+
+		span {
+			&.border {
+				position: relative;
+				display: inline-block;
+
+				&::before {
+					content: "";
+					position: absolute;
+					background: $primaryColor;
+					width: 100%;
+					height: 14px;
+					bottom: 6px;
+					z-index: -1;
+				}
+			}
+		}
+	}
+
+	&__desc {
+		margin-bottom: 1.25rem;
+	}
+
+	&__card {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+
+		&__img {
+			max-width: 686px;
+			width: 100%;
+		}
+		&__content {
+			max-width: 470px;
+			width: 100%;
+		}
+	}
+
+	//  form inputs
+	&__item {
+		padding-bottom: 1rem;
+	}
+
+	&__label {
+		display: inline-block;
+		margin-bottom: 0.5rem;
+		color: $titleColor;
+		text-transform: capitalize;
+		position: relative;
+
+		&::after {
+			content: "*";
+			color: red;
+			position: absolute;
+			right: -10px;
+			top: 0;
+		}
+	}
+
+	&__input {
+		width: 100%;
+		border: 1px solid rgba(0, 4, 3, 0.2);
+		border-radius: 8px;
+		padding: 16px 16px;
+		font-size: 16px;
+		line-height: 150%;
+
+		::placeholder {
+			color: #666968;
+			opacity: 1;
+		}
+
+		&__pass {
+			position: relative;
+			padding-right: 40px;
+		}
+
+		&__icon {
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			transform: translateY(-50%);
+			cursor: pointer;
+			font-size: 1.2rem;
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__password-wrapper {
+		position: relative;
+
+		svg {
+			width: 24px;
+			height: 24px;
+		}
+
+		.hidden {
+			display: none;
+		}
+	}
+
+	&__header {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	&__items {
+		&--step2 {
+			max-width: 570px;
+			width: 100%;
+			margin: auto;
+		}
+	}
+
+	&__progress {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+
+		&__wrap {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-direction: column-reverse;
+			margin-bottom: 2rem;
+			gap: 10px;
+		}
+	}
+
+	&__dots {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+	}
+	&__dot {
+		width: 51px;
+		height: 3px;
+		border-radius: 5px;
+		background-color: #666968;
+		opacity: 0.7;
+		transition: background-color 0.3s ease;
+		display: inline-block;
+
+		&--active {
+			background-color: $primaryColor;
+		}
+	}
+
+	&__counter {
+		font-size: 1rem;
+		line-height: 150%;
+		color: $titleColor;
+		font-weight: $fontBold;
+	}
+
+	&__current-step {
+		font-weight: $fontBold;
+	}
+
+	&__total-steps {
+		font-weight: $fontBold;
+	}
+
+	&__steps {
+		display: flex;
+		flex-direction: column;
+	}
+	&__step {
+		display: none; // Hide all steps by default
+
+		&--active {
+			display: block; // Show only the active step
+		}
+	}
+
+	&__button {
+		width: 100%;
+		display: block;
+		padding-top: 24px;
+
+		&--prev {
+			background-color: #95a5a6;
+		}
+	}
+}
