@@ -1,52 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-	const form = document.getElementById("multi-step-form");
-	const formSteps = Array.from(document.querySelectorAll(".form-step"));
-	const progressDots = Array.from(document.querySelectorAll(".dot"));
-	const currentStepSpan = document.getElementById("current-step");
-	const totalStepsSpan = document.getElementById("total-steps");
-
-	let currentStep = 0;
-
-	// Set the total number of steps in the counter
-	totalStepsSpan.textContent = formSteps.length;
-
-	// Function to show the current step
-	function showStep(stepIndex) {
-		formSteps.forEach((step, index) => {
-			step.classList.toggle("active", index === stepIndex);
-			progressDots[index].classList.toggle("active", index <= stepIndex);
-		});
-		currentStepSpan.textContent = stepIndex + 1;
-	}
-
-	// Initial display
-	showStep(currentStep);
-
-	// Handle next step
-	form.querySelectorAll(".next-step").forEach((button) => {
-		button.addEventListener("click", () => {
-			currentStep++;
-			if (currentStep >= formSteps.length) {
-				currentStep = formSteps.length - 1; // Prevent going past the last step
-			}
-			showStep(currentStep);
-		});
+	//  copy text
+	document.getElementById("copy-btn").addEventListener("click", () => {
+		const emailText = document.getElementById("email-text").textContent;
+		navigator.clipboard
+			.writeText(emailText)
+			.then(() => {
+				alert("Email copied to clipboard!");
+			})
+			.catch((err) => {
+				console.error("Could not copy email: ", err);
+			});
 	});
 
-	// Handle previous step
-	form.querySelectorAll(".prev-step").forEach((button) => {
-		button.addEventListener("click", () => {
-			currentStep--;
-			if (currentStep < 0) {
-				currentStep = 0; // Prevent going before the first step
-			}
-			showStep(currentStep);
-		});
-	});
-
-	// Form submit
-	form.addEventListener("submit", (e) => {
-		e.preventDefault(); // Prevent default form submission for demo
-		alert("Form submitted successfully!");
+	// Share button functionality (optional, can be expanded based on sharing requirements)
+	document.getElementById("share-btn").addEventListener("click", () => {
+		const emailText = document.getElementById("email-text").textContent;
+		// Example share functionality: open email client with the email address
+		window.location.href = `mailto:?subject=Check this email&body=${emailText}`;
 	});
 });
