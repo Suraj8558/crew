@@ -3,6 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+		/>
 		<link rel="stylesheet" href="/assets/css/style.css" />
 		<title>Document</title>
 	</head>
@@ -171,7 +175,7 @@
 								<p class="upload__text">Drag and Drop here Logo</p>
 								<p class="upload__desc">or</p>
 								<button class="upload__btn" id="browse-btn">Browse File</button>
-								<input type="file" id="file-upload" />
+								<input type="file" id="file-upload" hidden />
 								<p class="file__name" id="file-name"></p>
 							</div>
 
@@ -469,12 +473,16 @@
 								</div>
 
 								<div class="form__time">
-									<input type="time" name="time" placeholder="9:00 AM" />
-
-									<!-- <input type="text" id="time" placeholder="hh:mm AM/PM" /> -->
+									<input type="text" id="timepicker" placeholder="9:00 AM" />
 								</div>
+
 								<div class="form__time">
-									<input type="time" name="time" placeholder="8:00 PM" />
+									<input
+										type="time"
+										name="time"
+										id="timepicker"
+										placeholder="8:00 PM"
+									/>
 								</div>
 							</div>
 							<div class="form__checkbox__items">
@@ -489,10 +497,16 @@
 								</div>
 
 								<div class="form__time">
-									<input type="time" name="time" placeholder="9:00 AM" />
+									<input type="text" id="timepicker" placeholder="9:00 AM" />
 								</div>
+
 								<div class="form__time">
-									<input type="time" name="time" placeholder="8:00 PM" />
+									<input
+										type="time"
+										name="time"
+										id="timepicker"
+										placeholder="8:00 PM"
+									/>
 								</div>
 							</div>
 							<div class="form__checkbox__items">
@@ -612,7 +626,19 @@
 				</button>
 			</div>
 		</form>
-
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script>
+			// Flatpickr initialization with 12-hour format and placeholder
+			flatpickr("#timepicker", {
+				enableTime: true,
+				noCalendar: true,
+				dateFormat: "h:i K", // 12-hour format with AM/PM
+				time_24hr: false, // Enable AM/PM
+				defaultHour: 9, // Set default hour (optional)
+				defaultMinute: 0, // Set default minute (optional)
+				allowInput: true, // Allow users to type manually
+			});
+		</script>
 		<script src="/assets/js/form.js"></script>
 	</body>
 </html>

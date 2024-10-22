@@ -5,15 +5,18 @@ document.addEventListener("DOMContentLoaded", () => {
 	const dots = Array.from(document.querySelectorAll(".form__dot"));
 	const currentStepSpan = document.getElementById("current-step");
 	const totalStepsSpan = document.getElementById("total-steps");
-	const themeSelection = document.getElementById("theme-selection");
-	const togglePassword = document.getElementById("toggle-password");
 	const passwordInput = document.getElementById("confirm-password");
+	const togglePassword = document.getElementById("toggle-password");
+	const openEyeIcon = document.querySelector(".open-eye");
+	const closedEyeIcon = document.querySelector(".close-eye");
 	const uploadContainer = document.getElementById("upload-container");
+	const browseBtn = document.getElementById("browse-btn");
 	const fileInput = document.getElementById("file-upload");
 	const fileNameDisplay = document.getElementById("file-name");
+	let isDropped = false;
 
 	let currentStep = 0;
-	let isDropped = false;
+
 
 	// Set total steps
 	totalStepsSpan.textContent = steps.length;
@@ -79,32 +82,32 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 
-	// Toggle password visibility
 	togglePassword.addEventListener("click", () => {
 		const isPasswordVisible = passwordInput.type === "password";
+
+		// Toggle input type
 		passwordInput.type = isPasswordVisible ? "text" : "password";
-		togglePassword
-			.querySelector("img")
-			.classList.toggle("hidden", !isPasswordVisible); // Toggle eye icon
+
+		// Toggle eye icon visibility
+		openEyeIcon.classList.toggle("hidden", isPasswordVisible); // Hide open eye when password is visible
+		closedEyeIcon.classList.toggle("hidden", !isPasswordVisible); // Show closed eye when password is visible
 	});
 
 	// File upload handlers
-	uploadContainer.addEventListener("click", () => fileInput.click());
-	uploadContainer.addEventListener("dragover", (e) => {
-		e.preventDefault();
-		uploadContainer.style.borderColor = "#e5a01a"; // Change border color on drag
-	});
-
-	uploadContainer.addEventListener("dragleave", () => {
-		uploadContainer.style.borderColor = "#F4B41A"; // Reset border color when drag leaves
+	uploadContainer.addEventListener("click", (e) => {
+		// Prevent click event on container when clicking the button
+		if (e.target.id !== "browse-btn") {
+			fileInput.click();
+		}
 	});
 
 	// Open file input when the button is clicked
-	document.getElementById("browse-btn").addEventListener("click", () => {
+	browseBtn.addEventListener("click", (e) => {
+		e.preventDefault(); // Prevent form submission or other default behavior
 		fileInput.click();
 	});
 
-	// Handle file drop event
+	// Drag and drop events
 	uploadContainer.addEventListener("dragover", (e) => {
 		e.preventDefault();
 		uploadContainer.style.borderColor = "#e5a01a"; // Change border color on drag

@@ -64,11 +64,18 @@
 	}
 
 	&__time {
-		& > input {
-			padding: 18px 16px;
+		position: relative;
+		width: 100%;
+
+		input {
 			width: 100%;
-			border-radius: 6px;
+			padding: 20px 25px 20px 20px;
 			border: 1px solid #00040333;
+			border-radius: 6px;
+			font-size: 16px;
+			line-height: 0;
+			background: url('/assets/img/timedownArro.svg') no-repeat right 10px center;
+			background-size: 16px 16px;
 		}
 	}
 
@@ -92,9 +99,9 @@
 		width: 100%;
 		border: 1px solid rgba(0, 4, 3, 0.2);
 		border-radius: 8px;
-		padding: 16px 16px;
+		padding: 19px 16px;
 		font-size: 16px;
-		line-height: 150%;
+		line-height: 0;
 
 		::placeholder {
 			color: #666968;
@@ -181,6 +188,7 @@
 
 		&--step5 {
 			max-width: 584px;
+			margin-bottom: 50px;
 		}
 	}
 
@@ -281,7 +289,7 @@
 			margin-left: 8px;
 			font-size: 20px;
 			color: $blackColor;
-			line-height: 150%;
+			line-height: 0;
 			font-weight: $fontBold;
 			display: block;
 			cursor: pointer;
@@ -378,6 +386,7 @@
 .pt-70 {
 	padding-top: 70px;
 }
+
 
 @include tablet {
 	.header {
@@ -485,10 +494,21 @@
 			&-wrapper {
 				padding: 10px 16px;
 			}
+			&__items {
+				gap: 10px;
+			} 
 
 			&__label {
 				font-size: 16px;
 				line-height: 150%;
+			}
+		}
+
+		&__time {
+			input {
+				padding: 10px 15px 10px 10px;
+				font-size: 14px;
+				background-position: right 5px center;
 			}
 		}
 

@@ -1595,11 +1595,19 @@ select.select.classic:focus {
 .form__item {
   padding-bottom: 1rem;
 }
-.form__time > input {
-  padding: 18px 16px;
+.form__time {
+  position: relative;
   width: 100%;
-  border-radius: 6px;
+}
+.form__time input {
+  width: 100%;
+  padding: 20px 25px 20px 20px;
   border: 1px solid rgba(0, 4, 3, 0.2);
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 0;
+  background: url("/assets/img/timedownArro.svg") no-repeat right 10px center;
+  background-size: 16px 16px;
 }
 .form__label {
   display: inline-block;
@@ -1619,9 +1627,9 @@ select.select.classic:focus {
   width: 100%;
   border: 1px solid rgba(0, 4, 3, 0.2);
   border-radius: 8px;
-  padding: 16px 16px;
+  padding: 19px 16px;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 0;
 }
 .form__input ::placeholder {
   color: #666968;
@@ -1695,6 +1703,7 @@ select.select.classic:focus {
 }
 .form__header--step5 {
   max-width: 584px;
+  margin-bottom: 50px;
 }
 .form__items {
   width: 100%;
@@ -1781,7 +1790,7 @@ select.select.classic:focus {
   margin-left: 8px;
   font-size: 20px;
   color: #000000;
-  line-height: 150%;
+  line-height: 0;
   font-weight: 700;
   display: block;
   cursor: pointer;
@@ -1942,9 +1951,17 @@ select.select.classic:focus {
   .form__checkbox-wrapper {
     padding: 10px 16px;
   }
+  .form__checkbox__items {
+    gap: 10px;
+  }
   .form__checkbox__label {
     font-size: 16px;
     line-height: 150%;
+  }
+  .form__time input {
+    padding: 10px 15px 10px 10px;
+    font-size: 14px;
+    background-position: right 5px center;
   }
   .form__dots {
     width: 60%;
