@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+	const button = document.getElementById("copy-btn");
 	//  copy text
-	document.getElementById("copy-btn").addEventListener("click", () => {
+	button?.addEventListener("click", () => {
 		const emailText = document.getElementById("email-text").textContent;
 		navigator.clipboard
 			.writeText(emailText)
