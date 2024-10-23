@@ -47,6 +47,7 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 1rem;
+		margin-top: 40px;
 
 		&__img {
 			max-width: 686px;
@@ -55,6 +56,10 @@
 		&__content {
 			max-width: 470px;
 			width: 100%;
+
+			h2 {
+				margin-bottom: 15px;
+			}
 		}
 	}
 
@@ -69,12 +74,14 @@
 
 		input {
 			width: 100%;
+			appearance: none;
 			padding: 20px 25px 20px 20px;
 			border: 1px solid #00040333;
 			border-radius: 6px;
 			font-size: 16px;
 			line-height: 0;
-			background: url('/assets/img/timedownArro.svg') no-repeat right 10px center;
+			background: url("/assets/img/timedownArro.svg") no-repeat right 10px
+				center;
 			background-size: 16px 16px;
 		}
 	}
@@ -158,6 +165,11 @@
 				border-radius: 8px;
 				font-size: 16px;
 				line-height: 150%;
+				background: transparent;
+
+				&:focus {
+					outline: none;
+				}
 			}
 		}
 	}
@@ -360,6 +372,22 @@
 		&--active {
 			display: block; // Show only the active step
 		}
+		&--step1 {
+			padding-bottom: 96px;
+		}
+
+		&--step2 {
+			padding-bottom: 116px;
+		}
+		&--step3 {
+			padding-bottom: 37px;
+		}
+		&--step4 {
+			padding-bottom: 270px;
+		}
+		&--step5 {
+			padding-bottom: 40px;
+		}
 	}
 
 	&__button {
@@ -387,6 +415,11 @@
 	padding-top: 70px;
 }
 
+.form__time input.flatpickr-input.flatpickr-mobile {
+	appearance: none !important;
+	-webkit-appearance: none !important;
+	-moz-appearance: none !important;
+}
 
 @include tablet {
 	.header {
@@ -414,7 +447,27 @@
 			grid-template-columns: repeat(2, 1fr);
 			gap: 16px;
 		}
+
+		&__step {
+			&--step1 {
+				padding-bottom: 40px;
+			}
+
+			&--step2 {
+				padding-bottom: 54px;
+			}
+			&--step3 {
+				padding-bottom: 25px;
+			}
+			&--step4 {
+				padding-bottom: 135px;
+			}
+			&--step5 {
+				padding-bottom: 40px;
+			}
+		}
 	}
+
 	.pt-100 {
 		padding-top: 70px;
 	}
@@ -450,7 +503,24 @@
 			font-size: 16px;
 			line-height: 150%;
 		}
+		&__step {
+			&--step1 {
+				padding-bottom: 0;
+			}
 
+			&--step2 {
+				padding-bottom: 0;
+			}
+			&--step3 {
+				padding-bottom: 0;
+			}
+			&--step4 {
+				padding-bottom: 0;
+			}
+			&--step5 {
+				padding-bottom: 0;
+			}
+		}
 		&__card {
 			flex-direction: column;
 			&__img {
@@ -496,7 +566,7 @@
 			}
 			&__items {
 				gap: 10px;
-			} 
+			}
 
 			&__label {
 				font-size: 16px;

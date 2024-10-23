@@ -1275,11 +1275,11 @@ select.select.classic:focus {
   }
 }
 
-.form {
+.searchform {
   padding-top: 1rem;
   padding-bottom: 76px;
 }
-.form__btn {
+.searchform__btn {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1288,10 +1288,10 @@ select.select.classic:focus {
   justify-content: center;
   border-radius: 5px;
 }
-.form__btn img {
+.searchform__btn img {
   width: 20px;
 }
-.form__element {
+.searchform__element {
   width: 100%;
   max-width: 486px;
   display: grid;
@@ -1299,7 +1299,7 @@ select.select.classic:focus {
   gap: 0;
   align-items: center;
 }
-.form__wrapper {
+.searchform__wrapper {
   display: flex;
   align-items: center;
   background: #FFFFFF;
@@ -1308,18 +1308,18 @@ select.select.classic:focus {
   padding: 1.5rem;
   justify-content: space-between;
 }
-.form__buisness {
+.searchform__buisness {
   border: none;
   outline: none;
   max-width: 244px;
 }
-.form__options {
+.searchform__options {
   width: 100%;
   max-width: 242px;
   position: relative;
   padding-left: 60px;
 }
-.form__options::before {
+.searchform__options::before {
   content: "";
   background: radial-gradient(circle, rgb(244, 180, 26) 0%, rgb(255, 255, 255) 100%);
   top: 50%;
@@ -1329,7 +1329,7 @@ select.select.classic:focus {
   height: 42px;
   width: 1px;
 }
-.form__options::after {
+.searchform__options::after {
   content: "";
   position: absolute;
   right: 0;
@@ -1343,10 +1343,10 @@ select.select.classic:focus {
   transition: transform 0.3s ease;
   background-position: center center;
 }
-.form__options:hover:after {
+.searchform__options:hover:after {
   transform: translateY(-50%) rotate(180deg);
 }
-.form select {
+.searchform select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1362,35 +1362,35 @@ select.select.classic:focus {
   max-width: 242px;
 }
 @media (max-width: 991px) {
-  .form__btn {
+  .searchform__btn {
     width: fit-content;
   }
 }
 @media (max-width: 767px) {
-  .form__wrapper {
+  .searchform__wrapper {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
   }
-  .form__btn {
+  .searchform__btn {
     width: 100%;
   }
-  .form select {
+  .searchform select {
     width: 100%;
     max-width: 100%;
   }
-  .form__options {
+  .searchform__options {
     padding: 0;
     max-width: 100%;
     width: 100%;
   }
-  .form__options::before {
+  .searchform__options::before {
     display: none;
   }
-  .form__element {
+  .searchform__element {
     grid-template-columns: 1fr;
   }
-  .form__buisness {
+  .searchform__buisness {
     border: none;
     outline: none;
     max-width: 100%;
@@ -1583,6 +1583,7 @@ select.select.classic:focus {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  margin-top: 40px;
 }
 .form__card__img {
   max-width: 686px;
@@ -1591,6 +1592,9 @@ select.select.classic:focus {
 .form__card__content {
   max-width: 470px;
   width: 100%;
+}
+.form__card__content h2 {
+  margin-bottom: 15px;
 }
 .form__item {
   padding-bottom: 1rem;
@@ -1601,6 +1605,7 @@ select.select.classic:focus {
 }
 .form__time input {
   width: 100%;
+  appearance: none;
   padding: 20px 25px 20px 20px;
   border: 1px solid rgba(0, 4, 3, 0.2);
   border-radius: 6px;
@@ -1680,6 +1685,10 @@ select.select.classic:focus {
   border-radius: 8px;
   font-size: 16px;
   line-height: 150%;
+  background: transparent;
+}
+.form__input__select select:focus {
+  outline: none;
 }
 .form__password-wrapper {
   position: relative;
@@ -1851,6 +1860,21 @@ select.select.classic:focus {
 .form__step--active {
   display: block;
 }
+.form__step--step1 {
+  padding-bottom: 96px;
+}
+.form__step--step2 {
+  padding-bottom: 116px;
+}
+.form__step--step3 {
+  padding-bottom: 37px;
+}
+.form__step--step4 {
+  padding-bottom: 270px;
+}
+.form__step--step5 {
+  padding-bottom: 40px;
+}
 .form__button {
   width: 100%;
   display: none;
@@ -1875,6 +1899,12 @@ select.select.classic:focus {
   padding-top: 70px;
 }
 
+.form__time input.flatpickr-input.flatpickr-mobile {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+}
+
 @media (max-width: 991px) {
   .header__nav {
     padding: 20px 0;
@@ -1893,6 +1923,21 @@ select.select.classic:focus {
   .form__radioWrap {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+  }
+  .form__step--step1 {
+    padding-bottom: 40px;
+  }
+  .form__step--step2 {
+    padding-bottom: 54px;
+  }
+  .form__step--step3 {
+    padding-bottom: 25px;
+  }
+  .form__step--step4 {
+    padding-bottom: 135px;
+  }
+  .form__step--step5 {
+    padding-bottom: 40px;
   }
   .pt-100 {
     padding-top: 70px;
@@ -1922,6 +1967,21 @@ select.select.classic:focus {
   .form__desc {
     font-size: 16px;
     line-height: 150%;
+  }
+  .form__step--step1 {
+    padding-bottom: 0;
+  }
+  .form__step--step2 {
+    padding-bottom: 0;
+  }
+  .form__step--step3 {
+    padding-bottom: 0;
+  }
+  .form__step--step4 {
+    padding-bottom: 0;
+  }
+  .form__step--step5 {
+    padding-bottom: 0;
   }
   .form__card {
     flex-direction: column;
