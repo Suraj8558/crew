@@ -15,9 +15,9 @@
 		<header class="header">
 			<div class="container form__container">
 				<nav class="header__nav">
-					<div class="nav__logo">
+					<a href="/" class="nav__logo">
 						<img src="/assets/img/site_logo.svg" alt="site logo" />
-					</div>
+					</a>
 				</nav>
 			</div>
 		</header>
@@ -30,7 +30,10 @@
 			<div class="form">
 				<div class="form__steps" id="multiForm">
 					<!-- Step 1 -->
-					<div class="form__step form__step--active" id="step-1">
+					<div
+						class="form__step form__step--step1 form__step--active"
+						id="step-1"
+					>
 						<div class="form__card">
 							<div class="form__card__img">
 								<img src="/assets/img/sign-up.png" alt="form-sign-up" />
@@ -134,7 +137,7 @@
 					</div>
 
 					<!-- Step 2 -->
-					<div class="form__step pt-110" id="step-2">
+					<div class="form__step form__step--step2 pt-110" id="step-2">
 						<div class="form__header">
 							<h2 class="form__title">
 								Tell Us About<span class="border"> Your Business </span>
@@ -196,7 +199,7 @@
 					</div>
 
 					<!-- Step 3 -->
-					<div class="form__step pt-100" id="step-3">
+					<div class="form__step pt-100 form__step--step3" id="step-3">
 						<div class="form__header">
 							<h2 class="form__title">
 								Choose a theme that your business's
@@ -413,7 +416,7 @@
 						</div>
 					</div>
 					<!-- Step 4 -->
-					<div class="form__step pt-100" id="step-4">
+					<div class="form__step pt-100 form__step--step4" id="step-4">
 						<div class="form__header form__header--max546">
 							<h2 class="form__title">
 								Select Features for
@@ -452,7 +455,7 @@
 					</div>
 
 					<!-- Step 5 -->
-					<div class="form__step pt-70" id="step-5">
+					<div class="form__step pt-70 form__step--step5" id="step-5">
 						<div class="form__header form__header--step5">
 							<h2 class="form__title">
 								Business
@@ -602,7 +605,7 @@
 				</div>
 				<button
 					type="button"
-					class="btn btn__primary form__button form__button--next"
+					class="btn btn__primary form__button form__button--next form__button--step2"
 				>
 					Next
 				</button>
@@ -637,6 +640,7 @@
 				defaultHour: 9, // Set default hour (optional)
 				defaultMinute: 0, // Set default minute (optional)
 				allowInput: true, // Allow users to type manually
+				disableMobile: true,
 			});
 		</script>
 		<script src="/assets/js/form.js"></script>
