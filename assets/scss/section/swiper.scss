@@ -113,9 +113,28 @@
 }
 
 @media (max-width: 1024px) {
+	.slider {
+		padding-top: 70px;
+		padding-bottom: 40px;
+	}
 	.swiper {
 		&-section {
 			padding-inline: 100px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.slider {
+		padding-top: 50px;
+		padding-bottom: 30px;
+	}
+	.swiper {
+		&-section {
+			padding-inline: 60px;
+		}
+		&-container {
+			margin-bottom: 70px;
 		}
 	}
 }
