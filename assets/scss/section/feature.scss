@@ -1,5 +1,5 @@
 .feature {
-	padding: 2.156rem 1.25rem;
+	padding: 40px 20px;
 	display: flex;
 	gap: 2.25rem;
 	margin-bottom: 3.75rem;
@@ -28,6 +28,9 @@
 		margin-bottom: 50px;
 	}
 
+
+
+	
 	&--bg-blue {
 		border: 1px solid $lightBlue;
 		background: linear-gradient(
@@ -36,6 +39,14 @@
 			rgba(255, 255, 255, 1) 100%
 		);
 	}
+	&--bg-primary {
+		border: 1px solid rgb(255 215 215);
+		background: linear-gradient(
+			to bottom,
+			rgb(255, 215, 215, 0.3) 0%,
+			rgba(255, 255, 255, 1) 100%
+		);
+	}	
 
 	&--reverse {
 		flex-direction: row-reverse;
