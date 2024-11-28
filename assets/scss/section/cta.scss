@@ -1,0 +1,84 @@
+.cta {
+	padding-top: 150px;
+	padding-bottom: 150px;
+
+  &__wrap {
+		padding: 76px;
+		background: #FF6F61;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		border-radius: 32px;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 133px;
+			height: 104px;
+			background-image: url('/assets/img/homepage/P-white.png');
+			background-repeat: no-repeat;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 133px;
+			height: 102px;
+			background-image: url('/assets/img/homepage/p-bottom.png');
+			background-repeat: no-repeat;
+		}
+  }
+	
+	&__content {
+		max-width: 776px;
+		margin: auto;
+		text-align: center;
+
+	}
+
+	&__title {
+		color: $whiteColor;
+	}
+
+	&__desc {
+		color: $whiteColor;
+	}
+
+	&__btn {
+		background: $whiteColor;
+		color: $primaryColor;
+		border-radius: 16px;
+	}
+
+	@include tablet {
+		padding-top: 60px;
+		padding-bottom: 60px;
+
+
+	}
+
+	@include allMobile {
+		padding-top: 40px;
+		padding-bottom: 40px;
+
+		&__wrap { 
+			padding: 30px;
+			&::after {
+				width: 50px;
+    		height: 39px;
+				background-size: contain;
+			}
+			&::before {
+				width: 50px;
+				height: 50px;
+				background-size: contain;
+			}
+		}
+		
+	}
+}

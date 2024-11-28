@@ -1,132 +1,153 @@
 .faq {
-	display: grid;
-	grid-template-columns: 1fr 1.4fr;
-	gap: 2.125rem;
+  &__section {
+    padding-top: 80px;
+  }
 
-	&__section {
-		padding-top: 80px;
-	}
+  &__wrap {
+    background: #f5f5f5;
+    padding: 132px 0;
+  }
+  &__content {
+    text-align: center;
+  }
 
-	&__wrap {
-		background: #f6f6f6;
-		padding: 100px 0;
-	}
+  &__title {
+    p {
+      margin-bottom: 0;
+    }
 
-	&__title {
-		p {
-			margin-bottom: 0;
-		}
-
-		a {
-			font-weight: $fontBold;
-			color: $primaryColor;
-		}
-	}
+    a {
+      font-weight: $fontBold;
+      color: $primaryColor;
+    }
+  }
 }
 
 .accordion {
-	width: 100%;
+  width: 100%;
+  max-width: 645px;
+  margin: auto;
+	margin-top: 60px;
 
-	&__item {
-		border: 1px solid #6669684d;
-		padding: 13.5px 21px;
-		border-radius: 12px;
-		transition: 0.3s ease;
+  &__item {
+    border-left: 2px solid transparent;
+    border-bottom: 1px solid #6669684d;
+    padding: 18px 20.5px;
+    transition: 0.3s ease;
+  }
 
-		&:not(:last-child) {
-			margin-bottom: 19px;
-		}
-	}
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    padding: 0;
+  }
 
-	&__header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		background-color: transparent;
-		cursor: pointer;
-		border: none;
-		width: 100%;
-		text-align: left;
-		position: relative;
-		padding: 0;
-	}
+  &__title {
+    flex: 1;
+    padding-right: 30px;
+    position: relative;
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: $fontBold;
 
-	&__title {
-		flex: 1;
-		padding-right: 30px;
-		position: relative;
-		font-size: 1.25rem;
-		line-height: 140%;
-		font-weight: $fontBold;
+    &::before {
+      content: "";
+      background-image: url("/assets/img/arrow-down.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+      transition: transform 0.3s ease;
+    }
+  }
 
-		&::before {
-			content: "";
-			background-image: url("/assets/img/arrow-down.svg");
-			background-repeat: no-repeat;
-			background-position: center;
-			width: 28px;
-			height: 28px;
-			position: absolute;
-			right: 0;
-			top: 50%;
-			transform: translateY(-50%);
-			transition: transform 0.3s ease;
-		}
-	}
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
 
-	&__content {
-		max-height: 0;
-		overflow: hidden;
-		transition: max-height 0.3s ease;
+    p {
+      margin-top: 8px;
+      padding-right: 30px;
+    }
+  }
 
-		p {
-			margin-top: 4px;
-			padding-right: 30px;
-		}
-	}
+  &--active {
+    background: #f6f6f6;
+    border-left-color: #ff6f61;
+    border-bottom-color: transparent;
+    box-shadow: 0px 0px 16px 0px #0000001a;
+    transition: 0.3s ease;
 
-	&--active {
-		background: #f6f6f6;
-		border-color: transparent;
-		box-shadow: 0px 0px 16px 0px #0000001a;
-		transition: 0.3s ease;
+    .accordion {
+      &__title {
+        &::before {
+          transform: translateY(-50%) rotate(0deg);
+        }
+      }
 
-		&__header &__title {
-			padding-bottom: 0;
+      padding-bottom: 0;
+    }
 
-			&::before {
-				transform: rotate(180deg) translateY(50%);
-			}
-		}
-
-		&__content {
-			max-height: 1000px;
-		}
-	}
+    &__content {
+      max-height: 1000px;
+    }
+  }
 }
 
 @include tablet {
-	.faq {
-		grid-template-columns: 1fr;
+  .faq {
+    grid-template-columns: 1fr;
+
+    &__section {
+      padding-top: 50px;
+    }
+		&__wrap {
+			padding: 50px 0;
+		}
+  }
+	.accordion {
+		margin-top: 40px;
 	}
 }
 
 @include allMobile {
-	.faq {
-		grid-template-columns: 1fr;
-	}
+  .faq {
+    grid-template-columns: 1fr;
 
-	.accordion {
-		&__title {
-			font-size: 16px;
-			line-height: 1;
-		}
+    &__section {
+      padding-top: 40px;
+    }
 
-		&__content {
-			p {
-				font-size: 14px;
-				line-height: 150%;
-			}
+		&__wrap {
+			padding: 40px 0;
 		}
-	}
+  }
+
+  .accordion {
+		margin-top: 30px;
+
+    &__title {
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    &__content {
+      p {
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
+  }
 }

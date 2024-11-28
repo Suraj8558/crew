@@ -1,10 +1,11 @@
 .digital {
+	$digital: '.digital';
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 3.125rem;
+	gap: 35px;
 	align-items: center;
-	padding-top: 76px;
-	padding-bottom: 76px;
+	padding-top: 75px;
+	padding-bottom: 75px;
 
 	&__btn {
 		margin-top: 1rem;
@@ -14,17 +15,35 @@
 		position: relative;
 	}
 
+	&.order {
+		gap: 64px;
+		.digital {
+			&__contentWrap {
+				order: 2
+			}
+		}
+
+	}
+
 	@include tablet {
 		gap: 1.5rem;
 		padding-top: 50px;
-	 padding-bottom: 50px;
+		padding-bottom: 50px;
 	}
-	
+
 	@include allMobile {
 		grid-template-columns: 1fr;
-		gap: 2.125rem;
+		gap: 2rem;
 		padding-top: 40px;
 		padding-bottom: 40px;
+		&.order {
+		 	gap: 2rem;
+
+			.digital__content {
+				order: 2;
+			}
+
+		}
 	}
 
 }

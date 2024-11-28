@@ -1,0 +1,26 @@
+.title {
+  &__wrap {
+    max-width: 1024px;
+    margin: auto;
+		padding-bottom: 75px;
+  }
+
+  font-size: 40px;
+  line-height: 120%;
+  font-weight: 500;
+	margin-bottom: 0;
+	
+  @include tablet {
+    font-size: 32px;
+		&__wrap { 
+			padding-bottom: 40px;
+		}
+  }
+
+  @include allMobile {
+    font-size: 26px;
+		&__wrap { 
+			padding-bottom: 30px;
+		}
+  }
+}

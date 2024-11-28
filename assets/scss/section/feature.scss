@@ -1,110 +1,111 @@
 .feature {
-	padding: 40px 20px;
-	display: flex;
-	gap: 2.25rem;
-	margin-bottom: 3.75rem;
-	justify-content: space-between;
-	align-items: center;
-	border: 1px solid $lightPeach;
-	background: linear-gradient(
-		to bottom,
-		rgba(255, 234, 214, 0.3) 0%,
-		rgba(255, 255, 255, 1) 100%
-	);
+  padding: 33px 53px;
+  display: flex;
+  margin-bottom: 3.75rem;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(255, 215, 215, 1);
+  background: linear-gradient(180deg, #FFF5F5 0%, #FFFFFF 100%);
 
-	&:last-child {
+  &:last-child {
     margin-bottom: 0;
   }
 
-	border-radius: 16px;
+  border-radius: 16px;
 
-	&__section {
-		padding-top: 76px;
-		padding-bottom: 76px;
-	}
+  &__section {
+    padding-top: 75px;
+    padding-bottom: 64px;
+  }
 
-	&__heading {
-		text-align: center;
-		margin-bottom: 50px;
-	}
+  &__heading {
+    text-align: center;
+    margin-bottom: 50px;
+  }
 
 
+  &--bg-primary {
+    border: 1px solid rgba(255, 234, 214, 1);
+    background: linear-gradient(180deg, #FFFAF5 0%, #FFFFFF 100%);
+  }
 
-	
-	&--bg-blue {
-		border: 1px solid $lightBlue;
-		background: linear-gradient(
-			to bottom,
-			rgba(214, 231, 255, 0.3) 0%,
-			rgba(255, 255, 255, 1) 100%
-		);
-	}
-	&--bg-primary {
-		border: 1px solid rgb(255 215 215);
-		background: linear-gradient(
-			to bottom,
-			rgb(255, 215, 215, 0.3) 0%,
-			rgba(255, 255, 255, 1) 100%
-		);
-	}	
+  &--reverse {
+    flex-direction: row-reverse;
+  }
 
-	&--reverse {
-		flex-direction: row-reverse;
-	}
+  &__imgWrap {
+    max-width: 500px;
+    width: 100%;
+  }
 
-	&__imgWrap {
-		max-width: 560px;
-		width: 100%;
-	}
+  &__title {
+    color: $titleColor;
+    margin-bottom: 16px;
+  }
 
-	&__content {
-		flex: 1;
-		max-width: 504px;
-		width: 100%;
-	}
+  &__content {
+    flex: 1;
+    max-width: 535px;
+    width: 100%;
 
-	&__btn {
-		margin-top: 1rem;
-	}
+    ul {
+      padding-left: 20px;
+      li {
+        font-weight: 400;
+        color: $textColor;
+      }
+    }
+  }
 
-	&__contentWrap {
-		position: relative;
-	}
-	
-	padding-bottom: 10px; // temprary due to image space issue
+  &__btn {
+    margin-top: 1rem;
+  }
 
-	@include smallDesktop {
-		&__imgWrap {
-			width: 45%;
-		}
+  &__contentWrap {
+    position: relative;
+  }
 
-		&__content {
-			width: 50%;
-		}
-	}
+  @include smallDesktop {
+    &__imgWrap {
+      width: 45%;
+    }
 
-	@include tablet {
-		margin-bottom: 30px;
-		&__section {
-			padding-top: 50px;
-			padding-bottom: 50px;
-		}
-	}
+    &__content {
+      width: 50%;
+    }
+  }
 
-	@include allMobile {
-		margin-bottom: 24px;
-		padding-bottom: 2rem;
-		gap: 1rem;
-		flex-direction: column;
-		&__imgWrap {
-			width: 100%;
-		}
-		&__content {
-			width: 100%;
-		}
-		&__section {
-			padding-top: 40px;
-			padding-bottom: 40px;
-		}
-	}
+  @include tablet {
+    margin-bottom: 30px;
+
+    &__section {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+
+  @include allMobile {
+    margin-bottom: 24px;
+    padding: 1.5rem;
+
+    gap: 1rem;
+    flex-direction: column;
+
+    &__imgWrap {
+      width: 100%;
+    }
+
+    &__heading {
+      margin-bottom: 30px;
+    }
+
+    &__content {
+      width: 100%;
+    }
+
+    &__section {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
 }

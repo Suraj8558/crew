@@ -1,56 +1,80 @@
 .footer {
+	display: flex;
+	gap: 50px;
+	padding-bottom: 52px;
+
 	&__wrap {
 		background: $blackColor;
+		padding-top: 80px;
 	}
 	&__content {
-		max-width: 521px;
-		margin: auto;
-		padding-top: 78px;
-		padding-bottom: 69px;
+		max-width: 235px;
+		width: 100%;
+		margin-right: 22px;
 	}
 
 	&__menu {
-		padding-top: 12px;
-		padding-bottom: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-items: flex-start;
+		align-items: flex-start;
+		gap: 18px;
+		
+		&_wrap {
+			display: flex;
+			column-gap: 50px;
+			flex: 1;
+		}
+
+		&_title {
+			color: $whiteColor;
+			font-size: 18px;
+			line-height: 120%;
+			margin-bottom: 40px;
+		}
+
 		li {
-			display: inline-block;
 			list-style: none;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			gap: 8px;
+
 			a {
-				color: $whiteColor;
-				padding-inline: 15px;
-				display: block;
-				margin-bottom: 14px;
+				color: rgba($whiteColor, 0.6);
+				font-size: 14px;
+				line-height: 150%;
 			}
+
+			img {
+				width: 20px;
+				height: auto;
+			}
+
 		}
 	}
 	&__logo {
-		max-width: 457px;
+		max-width: 198px;
 		width: 100%;
-		margin: auto;
 		margin-bottom: 1rem;
 	}
 	&__desc {
-		color: rgb(255 255 255 / 80%);
+		color: rgba($whiteColor, 0.6);
 		text-align: center;
+		font-size: 14px;
+		line-height: 150%;
 	}
 
 	&__social {
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-start;
 		padding: 1rem 0;
 		gap: 12px;
 
 		&__imgWrap {
-			background: rgba(244, 180, 26, 0.1607843137);
 			width: 32px;
 			height: 32px;
-			border-radius: 50%;
-			padding: 7px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
 			img {
 				width: fit-content;
 				object-fit: contain;
@@ -59,18 +83,69 @@
 	}
 
 	&__copy {
-		border-top: 2px solid rgba(244, 180, 26, 0.1607843137);
+		border-top: 2px solid rgb(255 111 97 / 34%);
 		&-text {
-			color: rgb(255 255 255 / 80%);
+			color: rgba($whiteColor, 0.6);
 			padding: 20px 0;
 			text-align: center;
+			font-size: 14;
+			line-height: 150%;
+			
+			a  {
+				color: inherit;
+			}
+
+		}
+	}
+
+	
+	@include tablet {
+
+		flex-wrap: wrap;
+		gap: 20px;
+		
+		&__menu {
+			&_wrap {
+				column-gap: 20px;
+			}
+
+			&_title {
+				margin-bottom: 24px;
+			}
+		}
+
+		&__content {
+			padding-top: 40px;
+			padding-bottom: 10px;
 		}
 	}
 
 	@include allMobile {
-		&__content {
+		flex-direction: column;
+		gap: 20px;
+		padding-bottom: 15px;
+
+		&__menu {
+			&_wrap {
+				flex-direction: column;
+			}
+
+			&_title {
+				margin-bottom: 20px;
+			}
+
+			&_items {
+				padding-bottom: 20px;
+			}
+		}
+
+		&__wrap {
 			padding-top: 40px;
-			padding-bottom: 10px;
+		}
+
+		&__content {
+			padding: 0;
+      margin: 0;
 		}
 	}
 }
