@@ -99,6 +99,10 @@ html {
   overflow-x: hidden;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 article,
 aside,
 details,
@@ -459,12 +463,16 @@ p:last-child {
   background: rgb(252, 243, 226);
   border-top-left-radius: 30px;
 }
+.nav__header.website-header {
+  padding: 0;
+}
 .nav__logo img {
   max-width: 96px;
   height: auto;
 }
-.nav__toggle {
-  display: none;
+.nav__wrapper {
+  display: flex;
+  align-items: center;
 }
 .nav__menu {
   display: flex;
@@ -474,23 +482,39 @@ p:last-child {
   list-style: none;
   display: inline-block;
 }
-.nav__menu li a {
+.nav__menu a, .nav__menu-link {
   color: #333635;
-  padding: 1rem 0.938rem;
+  padding: 4px 0;
+  margin-right: 15px;
   line-height: 1.5rem;
   display: block;
   position: relative;
+  position: relative;
+  transition: color 0.3s ease;
 }
-.nav__menu li a.active {
-  color: #000403;
+.nav__menu a::before, .nav__menu-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0px; /* Position below the text */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FF6F61; /* Border color */
+  transition: width 0.3s ease;
 }
-.nav__menu li a::after {
+.nav__menu a:hover::before, .nav__menu a.active::before, .nav__menu-link:hover::before, .nav__menu-link.active::before {
+  width: 100%; /* Full width of the link */
+}
+.nav__menu a::after, .nav__menu-link::after {
   content: "";
   position: absolute;
   bottom: 0;
   width: fit-content;
   height: 1px;
   background-color: #FF6F61;
+}
+.nav__menu a:hover, .nav__menu a.active, .nav__menu-link:hover, .nav__menu-link.active {
+  color: #000403;
 }
 .nav__btn {
   display: flex;
@@ -520,36 +544,107 @@ p:last-child {
   background-color: #FFFFFF;
   border-bottom-left-radius: 16px;
 }
+.nav__btn ul {
+  gap: 16px;
+}
 .nav__toggle {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
+  position: relative;
+  z-index: 1000;
+}
+.nav__toggle .hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #333635;
+  position: relative;
+}
+.nav__toggle .hamburger::before, .nav__toggle .hamburger::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #333635;
+  position: absolute;
+  transition: transform 0.3s ease, top 0.3s ease;
+}
+.nav__toggle .hamburger::before {
+  top: -8px;
+}
+.nav__toggle .hamburger::after {
+  top: 8px;
+}
+.nav__toggle.nav__toggle--open .hamburger {
+  background: transparent;
+}
+.nav__toggle.nav__toggle--open .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.nav__toggle.nav__toggle--open .hamburger::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
 @media (max-width: 991px) {
+  .nav {
+    padding: 1rem 0;
+    min-height: 76px;
+  }
+  .nav__header {
+    background: transparent;
+    border-top-left-radius: none;
+  }
   .nav__toggle {
     display: block;
   }
-  .nav__menu {
+  .nav__wrapper {
     position: absolute;
-    top: 100%;
+    top: 77px;
     right: 0;
-    background: #ff00f0;
+    background: #ffffff;
     width: 100%;
     height: 0;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
     overflow: hidden;
-    flex-direction: column;
-    align-items: center;
     transition: height 0.3s ease;
+    z-index: 111;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav__btn::before, .nav__btn::after {
+    content: initial;
+  }
+  .nav__btn .call-to-actions {
+    display: flex;
+  }
+  .nav__btn .call-to-actions.hidden {
+    display: none;
+  }
+  .nav__menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+  }
+  .nav__menu li {
+    width: 100%;
+  }
+  .nav__menu a, .nav__menu-link {
+    margin-right: 0;
+    padding: 1rem;
+    border-bottom: 0.1px solid #f3ebeb;
   }
   .nav__btn {
-    display: none;
+    display: flex;
   }
   .nav__toggle {
     display: inline-block;
   }
-  .nav--open .nav__menu {
-    height: 240px;
+  .nav--open .nav__wrapper {
+    height: 100vh;
   }
 }
 
@@ -693,12 +788,13 @@ p:last-child {
 }
 @media (max-width: 991px) {
   .clip__section {
-    margin-bottom: 40;
+    margin-bottom: 40px;
+    display: none;
   }
 }
 @media (max-width: 767px) {
   .clip__section {
-    margin-bottom: 30;
+    margin-bottom: 30px;
   }
 }
 
@@ -1016,7 +1112,7 @@ p:last-child {
 }
 .accordion__title::before {
   content: "";
-  background-image: url("/assets/img/arrow-down.svg");
+  background-image: url("/assets/img/icons/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 28px;
@@ -1112,7 +1208,7 @@ p:last-child {
 }
 .footer__menu_wrap {
   display: flex;
-  column-gap: 50px;
+  justify-content: space-between;
   flex: 1;
 }
 .footer__menu_title {

@@ -1,127 +1,238 @@
 .nav {
-	// padding: 1.157rem 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 100%;
-	max-height: 90px;
+  // padding: 1.157rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-height: 90px;
 
+  &__header {
+    background: rgba(252, 243, 226, 1);
+    border-top-left-radius: 30px;
+    &.website-header {
+      padding: 0;
+    }
+  }
 
-	&__header {
-		background: rgba(252, 243, 226, 1);
-		border-top-left-radius: 30px;
-	}
+  &__logo {
+    img {
+      max-width: 96px;
+      height: auto;
+    }
+  }
 
-	&__logo {
-		img {
-			max-width: 96px;
-			height: auto;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 1rem;
+
+    li {
+      list-style: none;
+      display: inline-block;
+    }
+
+    a ,&-link {
+      color: $textColor;
+      padding: 4px 0;
+      margin-right: 15px;
+      line-height: 1.5rem;
+      display: block;
+      position: relative;
+      position: relative;
+      transition: color 0.3s ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0px; /* Position below the text */
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $primaryColor; /* Border color */
+        transition: width 0.3s ease;
+      }
+
+      &:hover::before,
+      &.active::before {
+        width: 100%; /* Full width of the link */
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: fit-content;
+        height: 1px;
+        background-color: $primaryColor;
+      }
+
+      &:hover,
+      &.active {
+        color: $titleColor;
+      }
+    }
+
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    padding: 20px 20px;
+    z-index: 2;
+
+    &::before {
+      content: url("/assets/img/homepage/half-vecter-top.svg");
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: -25px;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: $whiteColor;
+      border-bottom-left-radius: 16px;
+    }
+    ul {
+      gap: 16px;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+
+    .hamburger {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: $textColor;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: $textColor;
+        position: absolute;
+        transition: transform 0.3s ease, top 0.3s ease;
+      }
+
+      &::before {
+        top: -8px;
+      }
+
+      &::after {
+        top: 8px;
+      }
+    }
+
+    &.nav__toggle--open .hamburger {
+      background: transparent;
+
+      &::before {
+        transform: rotate(45deg);
+        top: 0;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+    }
+  }
+
+  @include tablet {
+		padding: 1rem 0;
+    min-height: 76px;
+		&__header  {
+			background: transparent;
+			border-top-left-radius: none;
 		}
-	}
 
-	&__toggle {
-		display: none;
-	}
+    &__toggle {
+      display: block;
+    }
 
-	&__menu {
-		display: flex;
-		gap: 1rem;
+    &__wrapper {
+      position: absolute;
+      top: 77px;
+      right: 0;
+      background: #ffffff;
+      width: 100%;
+      height: 0;
+      box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+      overflow: hidden;
+      transition: height 0.3s ease;
+      z-index: 111;
+      flex-direction: column;
+      align-items: flex-start;
 
-		li {
-			list-style: none;
-			display: inline-block;
+    }
+    
+    &__btn {
+      &::before, &::after {
+        content: initial;
+      }
+      & .call-to-actions {
+        display: flex;
+      }
 
-			a {
-				color: $textColor;
-				padding: 1rem 0.938rem;
-				line-height: 1.5rem;
-				display: block;
-				position: relative;
+      & .call-to-actions.hidden  {
+        display: none;
+      }
 
-				&.active {
-					color: $titleColor;
-				}
+    }
 
-				&::after {
-					content: "";
-					position: absolute;
-					bottom: 0;
-					width: fit-content;
-					height: 1px;
-					background-color: $primaryColor;
-				}
-			}
-		}
-	}
+    &__menu  {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      width: 100%;
 
-	&__btn {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-		position: relative;
-		padding: 20px 20px;
-		z-index: 2;
+      li {
+        width: 100%;
+      }
 
-		&::before {
-			content: url('/assets/img/homepage/half-vecter-top.svg');
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: -25px;
-			z-index: -1;
-		
-		}
+      a, &-link {
+        margin-right: 0;
+        padding: 1rem ;
+        border-bottom: 0.1px solid #f3ebeb;
+      }
+      
+    }
 
-		&::after {
-			content: "";
-			position: absolute;
-			width: 100vw;
-			height: 100%;
-			top: 0;
-			left: 0;
-			z-index: -1;
-			background-color: $whiteColor;
-			border-bottom-left-radius: 16px;
-		
-		}
-	}
 
-	&__toggle {
-		display: none;
-		background: none;
-		border: none;
-		cursor: pointer;
-	}
+    &__btn {
+      display: flex;
+    }
 
-	@include tablet {
-		&__toggle {
-			display: block;
-		}
+    &__toggle {
+      display: inline-block;
+    }
 
-		&__menu {
-			position: absolute;
-			top: 100%;
-			right: 0;
-			background: #ff00f0;
-			width: 100%;
-			height: 0;
-			overflow: hidden;
-			flex-direction: column;
-			align-items: center;
-			transition: height 0.3s ease;
-		}
-
-		&__btn {
-			display: none;
-		}
-
-		&__toggle {
-			display: inline-block;
-		}
-
-		&--open .nav__menu {
-			height: 240px; // Adjust the height based on content
-		}
-	}
+    &--open .nav__wrapper {
+      height: 100vh; // Adjust the height based on content
+    }
+  }
 }

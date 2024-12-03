@@ -98,6 +98,9 @@ html {
 .main {
   overflow-x: hidden;
 }
+.no-scroll {
+  overflow: hidden;
+}
 
 // HTML5 display definitions
 // Corrects block display not defined in IE6/7/8/9 & FF3

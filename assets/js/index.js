@@ -3,6 +3,19 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Select all accordion headers
 	const accordionHeaders = document.querySelectorAll(".accordion__header");
 
+	// menu toggle 
+
+const toggleButton = document.querySelector('.nav__toggle');
+const nav = document.querySelector('.nav');
+
+toggleButton.addEventListener('click', () => {
+  nav.classList.toggle('nav--open');
+  toggleButton.classList.toggle('nav__toggle--open');
+  
+  // Prevent scrolling
+  document.body.classList.toggle('no-scroll');
+});
+
 	// Open the first accordion by default
 	const firstAccordionItem = document.querySelector(".accordion__item");
 	const firstAccordionContent = firstAccordionItem.querySelector(

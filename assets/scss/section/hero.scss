@@ -159,13 +159,14 @@
 
   @include tablet {
     &__section {
-      margin-bottom: 40;
+      margin-bottom: 40px;
+      display: none;
     }
   }
 
   @include allMobile {
     &__section {
-      margin-bottom: 30;
+      margin-bottom: 30px;
     }
   }
 }
