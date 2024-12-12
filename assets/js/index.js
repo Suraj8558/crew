@@ -66,4 +66,20 @@ toggleButton.addEventListener('click', () => {
 				console.error("Could not copy email: ", err);
 			});
 	});
+
+	const menuLinks = document.querySelectorAll('.footer__menu li > a');
+	console.log('menuLinks', menuLinks)
+   menuLinks.forEach(link => {
+		link.addEventListener('click', (e) => {
+				e.preventDefault(); // Prevent default anchor navigation
+				console.log("vlicked");
+				
+				// Extract the slide number from href (e.g., #slide-1 -> 1)
+				const slideNumber = link.getAttribute('href').replace('#slide-', '');
+				const slideIndex = parseInt(slideNumber, 10) - 1; // Convert to zero-based index
+
+				// Scroll to the slide
+				swiper.slideToLoop(slideIndex);
+		});
+	});
 });

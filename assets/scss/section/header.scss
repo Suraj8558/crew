@@ -1,5 +1,8 @@
+body.path-base .nav__header {
+  background: rgba(252, 243, 226, 1);
+}
+
 .nav {
-  // padding: 1.157rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,10 +10,13 @@
   max-height: 90px;
 
   &__header {
-    background: rgba(252, 243, 226, 1);
+    background: #ffffff;
     border-top-left-radius: 30px;
     &.website-header {
       padding: 0;
+      &.sticky {
+        background-color: #ffffff;
+      } 
     }
   }
 
@@ -18,6 +24,8 @@
     img {
       max-width: 96px;
       height: auto;
+      width: 100%;
+      object-fit: contain;
     }
   }
 
@@ -236,3 +244,5 @@
     }
   }
 }
+
+

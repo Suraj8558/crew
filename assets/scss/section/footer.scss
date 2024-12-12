@@ -6,6 +6,7 @@
 	&__wrap {
 		background: $blackColor;
 		padding-top: 80px;
+		margin-top: 75px;
 	}
 	&__content {
 		max-width: 235px;
@@ -60,7 +61,7 @@
 	}
 	&__desc {
 		color: rgba($whiteColor, 0.6);
-		text-align: center;
+		text-align: left;
 		font-size: 14px;
 		line-height: 150%;
 	}
@@ -141,6 +142,7 @@
 
 		&__wrap {
 			padding-top: 40px;
+			margin-top: 40px;
 		}
 
 		&__content {

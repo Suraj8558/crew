@@ -452,6 +452,10 @@ p:last-child {
   }
 }
 
+body.path-base .nav__header {
+  background: rgb(252, 243, 226);
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -460,15 +464,20 @@ p:last-child {
   max-height: 90px;
 }
 .nav__header {
-  background: rgb(252, 243, 226);
+  background: #ffffff;
   border-top-left-radius: 30px;
 }
 .nav__header.website-header {
   padding: 0;
 }
+.nav__header.website-header.sticky {
+  background-color: #ffffff;
+}
 .nav__logo img {
   max-width: 96px;
   height: auto;
+  width: 100%;
+  object-fit: contain;
 }
 .nav__wrapper {
   display: flex;
@@ -1193,6 +1202,7 @@ p:last-child {
 .footer__wrap {
   background: #000000;
   padding-top: 80px;
+  margin-top: 75px;
 }
 .footer__content {
   max-width: 235px;
@@ -1240,7 +1250,7 @@ p:last-child {
 }
 .footer__desc {
   color: rgba(255, 255, 255, 0.6);
-  text-align: center;
+  text-align: left;
   font-size: 14px;
   line-height: 150%;
 }
@@ -1305,6 +1315,7 @@ p:last-child {
   }
   .footer__wrap {
     padding-top: 40px;
+    margin-top: 40px;
   }
   .footer__content {
     padding: 0;
@@ -1514,9 +1525,11 @@ p:last-child {
   border-radius: 12px;
   display: flex;
   align-items: center;
+  transition: 0.2s ease-in-out;
 }
-.parichy__card.shadow {
+.parichy__card:hover {
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.1215686275);
+  transition: 0.2s ease-in-out;
 }
 .parichy__card:last-child() {
   background: red;
@@ -1703,7 +1716,7 @@ p:last-child {
 
 .cta {
   padding-top: 150px;
-  padding-bottom: 150px;
+  padding-bottom: 75px;
 }
 .cta__wrap {
   padding: 76px;
@@ -1760,7 +1773,7 @@ p:last-child {
 @media (max-width: 767px) {
   .cta {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
   }
   .cta__wrap {
     padding: 30px;
